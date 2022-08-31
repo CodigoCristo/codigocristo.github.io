@@ -718,15 +718,15 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">fdisk -l</span></pre>
 
 <br>
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2006-38-12.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2006-38-12.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-15-02.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-15-02.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
 counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
 border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Es importante saber cual es la ruta de nuestro disco duro
-● Nuestro caso es <b>/dev/vda: 25Gib</b>
+● Nuestro caso es <b>/dev/vda: 50Gib</b>
 ● Los resultados que terminan en [rom, loop o airoot] pueden ignorarse
 ● En este caso /dev/loop0 es la imagen ISO de ArchLinux
 </blockquote>
@@ -765,8 +765,8 @@ overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
 <span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted -l | egrep "/dev/|msdos|gpt"</span></pre>
 
 <br>
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2006-56-35.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2006-56-35.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-18-20.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-18-20.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
@@ -790,9 +790,21 @@ Pueden ser:</p>
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1<br>/dev/sda2<br>/dev/sda3<br>/dev/nvme0n1p1<br>/dev/nvme0n1p2<br>/dev/nvme0n1p3<br>/dev/mmcblk0p1<br>/dev/mmcblk0p2<br>/dev/mmcblk0p3</blockquote>
 
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Para revisar nuestros discos y particiones con :</p>
+
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">lsblk</span></pre>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Crear las particiones</span></h3>
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Crear las particiones
+</span></h3>
+
+
+
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 <b>>> Arch Linux incluye las siguientes herramientas de particionado:</b></p>
@@ -800,84 +812,76 @@ Pueden ser:</p>
 <figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
 <div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux5.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
 
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>cfdisk</b> es para crear y modificar particiones facilmente
+● Fuente: <a href="https://wiki.archlinux.org/index.php/Partitioning" target="_blank">https://wiki.archlinux.org/index.php/Partitioning</a>
+</blockquote>
+<br>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-/*cfdisk es para crear particiones nuevas dependiendo nuestra necesidades <br />
-/*Fuente: <a href="https://wiki.archlinux.org/index.php/Partitioning" target="_blank">https://wiki.archlinux.org/index.php/Partitioning</a></p>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Estructura de ficheros en Linux
+</span></h3>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>>> Estructura de ficheros en Linux</b></p>
+
 
 <figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
 <div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/photo_2020-04-03_15-35-05.jpg" style="max-width: 70%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Debemos saber que de <b>root</b> nacen las demás carpetas<br>
+Debemos saber que de <b>root [ / ]</b> nacen las demás carpetas<br>
 La ventaja que <b>Linux permite asignarle una partición para cada carpeta</b><br>
+<br>
 Podemos tener <b>/boot/</b> en una partición<br>
 Podemos tener <b>/home/</b> en otra partición<br><br>
 <em><b>/home/</b> la carpeta HOME guarda los archivos de todos los usuarios algo parecido a un DISCO D: de windows<br>
 Todo depende si queremos tenerlo separado en otra partición <br></em><br>
-Lo cual puede ser bueno o malo, depende de las necesidades del usuario<br></p>
+</p>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>PARA SISTEMAS UEFI CON DISCOS EN GPT<br></b>
+● Tiene disponible 128 particiones primarias<br>
+● Es necesario tener su propia particion EFI para arrancar el sistema<br>
+● Su particion de arranque debe ser formateada en FAT32 para arrancar el sistema<br>
+● Su ruta será <b>/boot/efi</b></p>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>PARA SISTEMAS BIOS/LEGACY CON DISCOS EN MBR<br></b>
+● Tiene disponible 4 particiones primarias y el resto son extendidas<br>
+● No es necesario tener una partición para su arranque<br>
+● En caso quieran tener su propia partición debe ser formateada en EXT4 <br>
+● Su ruta será <b> /boot/ </b></p>
 
 <br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    <b>Tabla de Disco GPT - GUI Partition Table<br>
-    - Disponible 128 particiones primarias</b></p>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Ejemplos de particionados en UEFI - GPT
+</span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 <b>>> Ejemplo 1 de particionado en GPT</b></p>
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
-/dev/sda2  Root - home - etc...</blockquote>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Ventaja:</b> Podemos meter mas sistemas en los espacios libres de partición que permite GPT<br>
-<b>Desventaja:</b> Al momento de formatear el sistema borra todas las carpetas y archivos.</p>
-    
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt1.png" style="max-width: 70%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-<br>
+/dev/sda2  ROOT - HOME - ETC...</blockquote>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 <b>>> Ejemplo 2 de particionado en GPT</b></p>
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
-/dev/sda2  Root - home - etc...
-/dev/sda3  Memoria SWAP</blockquote>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Ventaja:</b> La integración de SWAP alivia mucho la RAM cuando este al límite de la RAM física.<br>
-<b>Desventaja:</b> Que nos quita una partición, pero también podemos hacer un archivo como FILE SWAP</p>
-    
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt2.png" style="max-width: 70%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-
-
+/dev/sda2  ROOT - HOME - ETC...
+/dev/sda3  [SWAP]</blockquote>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 <b>>> Ejemplo 3 de particionado en GPT</b></p>
-
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
-/dev/sda2  Root
-/dev/sda3  Home
-/dev/sda4  Memoria SWAP</blockquote>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Ventaja:</b> Separamos la carpeta <b>/home y /efi</b>, al tener /home podemos salvar los archivos del usuario en otra partición y al formatear solo tocar archivos de <b>root</b><br>
-<b>Desventaja:</b> La desventaja es confundirse un poco al inicio por tener varias particiones, es importante saber las rutas reconocer bien.</p>
-    
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt3.png" style="max-width: 70%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-
-
-
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>>> La documentación oficial nos recomienda usar en GPT la siguiente estructura:</b></p>
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM
 /dev/sda2  ROOT
@@ -886,57 +890,159 @@ Lo cual puede ser bueno o malo, depende de las necesidades del usuario<br></p>
 </blockquote>
 
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>>> La documentación oficial nos recomienda usar en GPT la siguiente estructura <<</b></p>
+
+<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" alt="CodigoCristo " border="30" /></a>
+<br>
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Ejemplos de particionados en BIOS/LEGACY - MBR
+</span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>>> Memoria SWAP</b><br>
-Menos de 1GB RAM física    >>  2GB de SWAP<br>
-Entre 2GB a 4GB RAM física >>  2GB a 4GB de SWAP<br>
-8GB de RAM física          >>  4GB de SWAP<br>
-Más de 8GB de RAM física   >>  2GB a 4GB de SWAP<br>
-</p>
+<b>>> Ejemplo 1 de particionado en MBR</b></p>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://telegra.ph/file/7da5fe855b837773bc3e6.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT - ROOT - HOME - ETC...)</blockquote>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    El sistema Android esta basado en linux y <b><em> / </em></b> tambien es root es la raíz del sistema.</p>
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux9.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<b>>> Ejemplo 2 de particionado en MBR</b></p>
 
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Entendido esos conceptos ejecutamos <b>cfdisk</b></p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">cfdisk /dev/sda</span></pre>
-
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux1.png" style="max-width: 70%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+/dev/sda2  ROOT - HOME - ETC...
+/dev/sda3  [SWAP]</blockquote>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-/*Vamos empezar eliminando las particiones en <b>[ Delete ]</b> y creando nuevas en <b>[ New ]</b><br>
-/*Podemos crear varias particiones: <b>sda1, sda2, sda3...</b><br>
-/*Podemos crear las particiones y cambiar el tipo de partición en <b>[ Type ]</b><br>
-/*<b>Flecha Arriba / Abajo - Flechas Derecha / Izquierda</b> - para movernos en cfdisk<br>
-</p>
+<b>>> Ejemplo 3 de particionado en MBR</b></p>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux2.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+/dev/sda2  ROOT
+/dev/sda3  [SWAP]
+/dev/sda4  HOME
+</blockquote>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>En este ejemplo usaremos:</b><br><br>
-Sda1 > EFI SYSTEM<br>
-Sda2 > root<br>
-Sda3 > home<br>
-Sda4 > Swap<br><br>
-/*Al finalizar el particionado le damos en <b>[ Write ]</b> para escribir los cambios<br></p>
+<b>>> Ejemplo 4 de particionado en MBR</b></p>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux4.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+/dev/sda2  ROOT
+/dev/sda3  [SWAP]
+/dev/sda4  HOME
+/dev/sda5  Extendida (esta no se monta solo es la conexión)
+/dev/sda6  Extendida
+/dev/sda7  Extendida
+</blockquote>
 
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>>> La documentación oficial nos recomienda usar en MBR la siguiente estructura <<</b></p>
+
+
+<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" alt="CodigoCristo " border="30" /></a>
+
+
+
+
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Memoria SWAP
+</span></h3>
+
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Menos de 1GB RAM física    =  2GB de SWAP
+● Entre 2GB a 4GB RAM física =  2GB a 4GB de SWAP
+● 8GB de RAM física          =  4GB de SWAP
+● Más de 8GB de RAM física   =  2GB a 4GB de SWAP
+</blockquote>
+
+<a href="https://telegra.ph/file/7da5fe855b837773bc3e6.png" title="CodigoCristo" target="_blank">
+<img src="https://telegra.ph/file/7da5fe855b837773bc3e6.png" alt="CodigoCristo " border="30" /></a>
+
+<br>
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>>> Pero si necesitan hibernación 8Gb serán suficientes <<</b></p>
+
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Ejecutando CFDISK - Particionador semi-Gráfico
+</span></h3>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">cfdisk /dev/vda</span></pre>
+
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Para UEFI con GPT
+</span></h3>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-48-26.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-48-26.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
+
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Vamos empezar eliminando las particiones en <b>[ Eliminar ]</b> y creando nuevas en <b>[ Nueva ]</b>
+● Podemos crear varias particiones: <b>vda1, vda2, vda3...</b>
+● Podemos crear las particiones y cambiar el tipo de partición en <b>[ Tipo ]</b>
+● <b>Flecha Arriba / Abajo - Flechas Derecha / Izquierda</b> - para movernos en cfdisk
+</blockquote>
+<a href="https://img.webme.com/pic/c/codigocristo/gpt-archlinux2.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux2.png" alt="CodigoCristo " border="30" /></a>
+<br>
+
+
+
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Para la particion EFI  <b>/dev/vda1</b> debe ser tipo <b>EFI System</b>
+● Para la particion ROOT <b>/dev/vda2</b> debe ser tipo <b>Sistema de ficheros de Linux</b>
+● Para la particion SWAP <b>/dev/vda3</b> debe ser tipo <b>Linux Swap</b>
+● Para la particion HOME <b>/dev/vda4</b> debe ser tipo <b>Sistema de ficheros de Linux</b>
+</blockquote>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-54-51.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-54-51.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+
+
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Al finalizar el particionado le damos en <b>[ Escribir ]</b> para confirmar los cambios
+</blockquote>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Podemos revisarlo con fdisk -l</p>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2009-08-45.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2009-08-45.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
 
 
 <br>
