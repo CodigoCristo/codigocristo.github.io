@@ -1188,138 +1188,265 @@ font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-col
 MONTAR LAS PARTICIONES
 </span></h3>
 
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Ahora para <b>root</b> en este ejemplo es <b><em>/dev/vda2</em></b> lo cual debe ser montado primero<br>
+Ya que todo inicia con <b><em>ROOT [ / ]</em></b> </p>
+
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
+font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);">
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">mount /dev/vda2 /mnt<span style="color: rgb(255, 0, 0);"><b>/</b></span></span></pre>
+
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora para <b>root</b> en este ejemplo es <b><em>/dev/vda2</em></b> lo cual debe ser montado primero ya que todo inicia con <b><em>ROOT [ / ]</em></b> </p>
+Para montar las particiones necesitamos crear antes las rutas lógicas de montaje.<br>
+Necesitamos dentro de <b><em>/mnt/</em></b> <br>El resto de directorios <b><em>/boot/</em></b> o <b><em>/home/</em></b> o <b><em>/boot/efi</em></b> etc...
+<br></p>
+
+
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+1. Para UEFI
+</span></h3>
+
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
 background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mount /dev/vda2 /mnt/</span></pre>
+style="color: rgb(0, 0, 0);">mkdir -p /mnt/boot/efi/</span></pre>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">mkdir -p /mnt/home/</span></pre>
 
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Para montar las particiones necesitamos crear antes las rutas lógicas de montaje.<br>
-Si va a instalar Archlinux como único sistema en modo UEFI, entonces necesitamos crear <b><em>/mnt</em></b> y dentro de este directorio incluir <b><em>/boot/</em></b> o <b><em>/home/</em></b> o <b><em>/boot/efi</em></b> o etc...
-<br></p>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+2. Para BIOS Legacy
+</span></h3>
 
 
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">mkdir -p /mnt/boot/</span></pre>
 
 
-
-
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mkdir -p /mnt/efi</span></pre>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mkdir -p /mnt/home</span></pre>
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Verificamos que se hayan creado correctamente los directorios</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">ls /mnt/</span></pre>
-
-
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">> /mnt - sistemas de archivos montados manualmente en el disco duro.<br>
-> / - diagonal invertida significa root</blockquote>
-<br>
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Montando la partición de Arranque <b><em>/efi</em></b> </p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);">/efi</span></span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Montando la partición <b><em>/home</em></b> </p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda3 /mnt<span style="color: rgb(255, 0, 0);">/home</span></span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">mkdir -p /mnt/home/</span></pre>
 
 
 
 <br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Generador de Mirrorlist dentro LiveCD</span></h3>
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)"> <b>/mnt</b> - sistemas de archivos montados manualmente en el disco duro.<br>
+<b> / </b>- diagonal invertida significa root</blockquote>
+<br>
+
+
+
+
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+1. Para UEFI
+</span></h3>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Montando la partición de Arranque <b><em>/boot/efi/</em></b> </p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
+font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);">
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/boot/efi/</b></span></span></pre>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Montando la partición <b><em>/home/</em></b> </p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
+font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);">
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/home/</b></span></span></pre>
+
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-09-05%2002-55-35.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-09-05%2002-55-35.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+2. Para BIOS LEGACY
+</span></h3>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Montando la partición de Arranque <b><em>/boot/</em></b> </p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
+font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);">
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/boot/</b></span></span></pre>
+
+
+
+
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora montadas las particiones instalamos los programas base y lo más esencial posible.<br>
-Pero hay muchos casos que pacstrap les resulta una descarga muy lenta y eso se debe al no
-tener los mirros mas rápidos de descarga.<br>
+Montando la partición <b><em>/home/</em></b> </p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
+font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);">
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/home/</b></span></span></pre>
+
+
+
+
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Generador de Mirrorlist dentro LiveCD
+</span></h3>
+
+
+
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+En algunos casos pacstrap les resulta una descarga muy lenta <br>Eso se debe al no
+tener los mirros mas rápidos.<br>
 Para tener los Mirros más rápidos para tener mejores descargas usaremos <b><em>reflector</em></b></p>
 
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">pacman -Sy reflector python --noconfirm</span></pre>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacman -Sy reflector python --noconfirm</span></pre>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Para ejecutar reflector y tener los mejores Mirrors Servers es:</p>
+Para ejecutar reflector y tener los mejores Mirrors :</p>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">reflector --verbose --latest 15 --sort rate --save /etc/pacman.d/mirrorlist</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist</span></pre>
+
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Para revisar la lista de Mirrors Servers y confirmar que lo hizo reflector el comando es:</p>
 
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">cat /etc/pacman.d/mirrorlist</span></pre>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">cat /etc/pacman.d/mirrorlist</span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Confirmamos comparando donde dice <b><em>by Reflector</em></b></p>
+
 
 <figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
 <div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux11.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
 
+
 <br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Instalación del sistema</span></h3>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+INSTALACIÓN DEL SISTEMA con pacstrap
+</span></h3>
+
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Especificación de los paquetes necesarios.</b></p>
+<b>Especificación de los paquetes base y esenciales.</b></p>
+
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt base base-devel nano</span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-/* <b>Instalación base - base-devel</b>: programas, configuraciones, directorios, etc...<br>
-/* <b>Editor de texto en terminal</b>: Nano</p>
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>base</b> : Paquete mínimo para una instalación básica.</b>
+● <b>base-devel</b> : Un grupo de paquetes que incluye las herramientas necesarias para construir el sistema.
+</blockquote>
 
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt linux-firmware linux linux-headers mkinitcpio</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-/* <b>linux-firmware</b>: Binarios de controladores generalmente propietarios, Las tarjetas gráficas modernas de AMD, NVIDIA y Intel Wi-Fi requieren la carga de blobs para que el hardware funcione correctamente.<br>
-/* <b>linux</b>: kernel en su versión estable<br>
-/* <b>linux-headers</b>: cabezeras del kernel en su versión estable<br>
-/* <b>mkinitcpio</b>: Utilidad de creación de imágenes initramfs para el kernel<br><br>
-Después de la instalación del Kernel, Automático se crearan las IMG de Linux en la carpeta de <b><em>/boot/</em></b> gracias a <b><em>mkinitcpio</em></b><br>
-</p><br>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Los siguientes paquetes nos permiten gestionar las conexiones a Internet cableadas</p>
+<b>Kernel del sistema.</b></p>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt linux linux-firmware linux-headers mkinitcpio</span></pre>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt dhcpcd networkmanager iwd net-tools ifplugd </span></pre>
+
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>linux</b> : kernel en su versión estable.</b>
+● <b>linux-firmware</b> : Binarios de controladores generalmente propietarios.
+● <b>linux-headers</b> : Cabezeras del kernel en su versión estable.
+● <b>mkinitcpio</b> : Utilidad de creación de imágenes initramfs para el kernel.
+</blockquote>
+
+
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Los siguientes paquetes nos permiten gestionar las conexiones a Internet Inalámbrica (Wifi)</p>
+<b>Conexión cableada y Wifi.</b></p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt iw wireless_tools wpa_supplicant dialog wireless-regdb</span></pre>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    En el caso que uses una laptop, para el Touchpad: (opcional)</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt xf86-input-libinput</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">pacstrap /mnt dhcp networkmanager iwd</span></pre>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    En el caso que uses una laptop, para el Bluetooth: (opcional)</p>
+<b>Touchpad en laptops (Opcional).</b></p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">pacstrap /mnt bluez bluez-utils pulseaudio-bluetooth</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">pacstrap /mnt xf86-input-libinput</span></pre>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Bluetooth en laptops (Opcional).</b></p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">pacstrap /mnt bluez bluez-utils pulseaudio-bluetooth</span></pre>
+
+
+
 
 
 
@@ -1331,7 +1458,13 @@ Después de la instalación del Kernel, Automático se crearan las IMG de Linux 
 
 
 <br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">El archivo fstab</span></h3>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+ARCHIVO FSTAB
+</span></h3>
+
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Es usado para definir cómo las particiones,<br>
