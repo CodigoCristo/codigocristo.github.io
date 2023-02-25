@@ -365,6 +365,32 @@ Iniciamos el liveCD en modo ROOT (Admintrador) para empezar a descargar los prog
 <br>
 <br>
 
+
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
+text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Configuración de teclado</span></h3>
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Establecer distribución del teclado temporal para que reconozca todos los caracteres</span></h3>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para Español</p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys es</span></pre>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para LatinoAmerica</p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys la-latin1</span></pre>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para Americano</p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys us</span></pre>
+
+<br>
+
+
 <h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
 text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
@@ -387,10 +413,17 @@ font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizel
 font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
 1. Resultado si es UEFI : </span></h3>
+
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
 overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
 font-size: 15px; background-color: rgb(255, 255, 255);">
 Si hay archivos en <b> efivars</b> significa que tu sistema es <b>UEFI/EFI</b></p>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
+overflow-wrap: break-word; color: rgb(12, 60, 255); font-family: &quot;Open Sans&quot;, sans-serif; 
+font-size: 15px; background-color: rgb(255, 255, 255);">
+<a href="https://codigocristo.github.io/" title="ArchUEFI" target="_blank">
+<b>>>> Presiona aqui para continuar con la instalación en UEFI/EFI <<< </b></a></p>
 
 
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2005-43-10.png?raw=true" title="Img" target="_blank">
@@ -409,6 +442,11 @@ overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&
 font-size: 15px; background-color: rgb(255, 255, 255);">
  <b>Si NO existen archivos en efivars</b> significa que tu sistema es <b>BIOS/Legacy</b></p>
 
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
+overflow-wrap: break-word; color: rgb(12, 60, 255); font-family: &quot;Open Sans&quot;, sans-serif; 
+font-size: 15px; background-color: rgb(255, 255, 255);">
+<a href="https://codigocristo.github.io/" title="ArchUEFI" target="_blank">
+<b>>>> Presiona aqui para continuar con la instalación en BIOS/Legacy <<< </b></a></p>
 
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/b2bdf68847058047d8297.png?raw=true" title="Img" target="_blank">
 <img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/b2bdf68847058047d8297.png?raw=true" alt="CodigoCristo " border="30" /></a>
@@ -417,26 +455,6 @@ font-size: 15px; background-color: rgb(255, 255, 255);">
 
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Pre-instalación</span></h3>
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Establecer distribución del teclado temporal para que reconozca todos los caracteres</span></h3>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para Español</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys es</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para LatinoAmerica</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys la-latin1</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para Americano</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys us</span></pre>
 
 
 <br>
@@ -448,274 +466,6 @@ font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-col
 Conexión a Internet por Ethernet Cableado
 </span></h3>
 
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: 
-rgb(255, 255, 255); text-align: left; ">Se recomienda usar la conexión por cable en ves de la inalámbrica, para mayor estabilidad y velocidad del Internet.<br>
-Para conexión por cable tan <em>solo es necesario tener conectado el cable de Ethernet.</em><br>Luego hacer un ping para verificar la conexión a Internet.</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">ping -c 3 archlinux.org</span></pre>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, 
-sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-/*El parámetro <em><b>-c 3</em></b> establece que se ejecute ping tres veces.<br>
-/*Por defecto en la ISO habilita el servicio de DHCP y NetworkManager para el uso de red cableada<br>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, 
-sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ya debería estar recibiendo datos al hacer ping, lo que indica que ya tiene conexión a Intenet, 
-de lo contrario reinicie y vuelva a entrar al live usb para iniciar correctamente los servicios.<br>
-</p>
-
-
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux1.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux1.png" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Conexión a Internet por Wifi</span></h3>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si desea conectarse por wifi, es conveniente primero verificar si se ha cargado correctamente el controlador 
-de la tarjeta wifi. Compruebe que en la salida del siguiente comando exista un fichero que inicie con la letra 
-<em><b>wl...</b></em></p>
-
-
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
-counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0;
- font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">wlan0<br>wlp2s0<br>Otros...</blockquote>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">ls /sys/class/net</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si no existe ningún fichero que inicie con la letra <em><b>wl </b></em>,entonces no podrá realizar la instalación vía wifi.
-<br>
->  > >  Si por el contrario el fichero existe entonces será posible conectarse a Internet vía wifi.<br><br>
-Estaremos usando dos programas que vienen ya activos en el LIVE CD: <br>
-</p>
-
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-IWD
-</span></h3>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">iwctl --passphrase 'contraseña' station wlan0 connect 'NombreDeRed' </span></pre>
-
-<br>
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-NMCLI
-</span></h3>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">nmcli dev wifi -a connect 'NombreDeRed' password 'contraseña' </span></pre>
-
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ambas opciones son válidas para conectarse a wifi</p>
-<br>
-
-
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Wifi - Red oculta (opcional)</span></h3>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Para redes ocultas usaremos la herramienta wpa_supplicant, teniendo en cuenta el nombre del dispositivo, ssid y password.<br>
-</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">nano /etc/wpa_supplicant/wpa_supplicant.conf</span></pre>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Agregamos el siguiente texto<br>
-</p>
-
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
-counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; 
-overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); 
-white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">network={
-  ssid="Familia Hernández"
-  scan_ssid=1
-  key_mgmt=WPA-PSK
-  psk="contraseña"
-}
-</blockquote>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora levantamos la red.
-</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</span></pre>
-
-<br>
-
-
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Cambiar el Idioma en liveCD
-</span></h3>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif;
-font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Vamos a configurar el idioma temporal de las herramientas disponibles a nuestro idioma español, sobre todo las de particionado.
-</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">echo "es_ES.UTF-8 UTF-8" > /etc/locale.gen</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; 
-background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora vamos a aplicar la configuración.
-</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">locale-gen</span></pre>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; 
-color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; 
-background-color: rgb(255, 255, 255); text-align: left; ">
-Exportamos la variable LANG para finalizar la configuración regional temporal.
-</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">export LANG=es_ES.UTF-8</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; 
-color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; 
-background-color: rgb(255, 255, 255); text-align: left; ">
-Comprobamos que este en español con pacman
-</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">pacman -Sy</span></pre>
-<br>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2005-56-41.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2005-56-41.png?raw=true" alt="CodigoCristo " border="30" /></a>
-
-<br>
-
-
-<br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Actualizar reloj del sistema
-</span></h3>
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; 
-padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; 
-overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">timedatectl set-ntp true</span></pre>
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Tabla de partición para UEFI o BIOS/Legacy
-</span></h3>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Existen dos tablas de particiones mas populares para usar, <b>MBR o GPT</b><br>
-<br>
-● MRB permite solo 4 particiones Primarias y compatible con BIOS/Legacy.<br>
-<br>
-● GPT permite más de 4 particiones Primarias y compatible con UEFI.<br>
-<br>
-<b>MBR es para sistemas antiguos y GPT es para sistemas modernos pero todo eso depende de tu placa madre.</b><br>
-<br>En resumen:<br></p>
-
-
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
-counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
-border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">UEFI usa discos en GPT<br>BIOS usa discos en MBR</blockquote>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Para consultar la tabla de particiones  que tiene su disco duro donde va a instalar el Sistema Operativo use el siguiente comando.</b></p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">fdisk -l</span></pre>
 
 <br>
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-15-02.png?raw=true" title="CodigoCristo" target="_blank">
