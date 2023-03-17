@@ -897,8 +897,8 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Podemos revisarlo con <b>fdisk -l</b></p>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2009-08-45.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2009-08-45.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/4.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/4.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 
 
@@ -934,6 +934,34 @@ style="color: rgb(0, 0, 0);">mkfs.fat -F32 -n "UEFI" /dev/vda1</span></pre>
 font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
 line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Formateo de la Partición SWAP  :
+</span></h3>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">mkswap -L "SWAP" /dev/vda2</span></pre>
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Activación SWAP ON  :
+</span></h3>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
+background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
+color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
+style="color: rgb(0, 0, 0);">swapon /dev/vda2</span></pre>
+
+
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
+font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
+line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
 Formateo de la Partición de Root :
 </span></h3>
 
@@ -941,43 +969,11 @@ Formateo de la Partición de Root :
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
 background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mkfs.ext4 -L "ROOT" /dev/vda2</span></pre>
+style="color: rgb(0, 0, 0);">mkfs.ext4 -L "ROOT" /dev/vda3</span></pre>
 
 
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
-line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Formateo y activación de la Partición SWAP  :
-</span></h3>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mkswap -L "SWAP" /dev/vda3</span></pre>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">swapon /dev/vda3</span></pre>
-
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
-line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Formateo de la Partición de HOME :
-</span></h3>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mkfs.ext4 -L "HOME" /dev/vda4</span></pre>
 
 
 <br>
@@ -990,7 +986,7 @@ MONTAR LAS PARTICIONES
 </span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora para <b>root</b> en este ejemplo es <b><em>/dev/vda2</em></b> lo cual debe ser montado primero<br>
+Ahora para <b>root</b> en este ejemplo es <b><em>/dev/vda3</em></b> lo cual debe ser montado primero<br>
 Ya que todo inicia con <b><em>ROOT [ / ]</em></b> </p>
 
 
@@ -999,7 +995,7 @@ Ya que todo inicia con <b><em>ROOT [ / ]</em></b> </p>
 font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);">
 <span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mount /dev/vda2 /mnt<span style="color: rgb(255, 0, 0);"><b>/</b></span></span></pre>
+style="color: rgb(0, 0, 0);">mount /dev/vda3 /mnt<span style="color: rgb(255, 0, 0);"><b>/</b></span></span></pre>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
@@ -1013,7 +1009,7 @@ Necesitamos hacer un chroot dentro de <b><em>/mnt/</em></b> <br>Para el resto de
 font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
 line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-1. Creamos la carpeta para UEFI y la carpeta para Home
+1. Creamos la carpeta para UEFI 
 </span></h3>
 
 
@@ -1022,14 +1018,6 @@ font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14
 background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
 style="color: rgb(0, 0, 0);">mkdir -p /mnt/boot/efi/</span></pre>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mkdir -p /mnt/home/</span></pre>
-
 
 
 
@@ -1049,16 +1037,8 @@ Montando la partición de Arranque <b><em>/boot/efi/</em></b> </p>
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
 font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/boot/efi/</b></span></span></pre>
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/vda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/boot/efi/</b></span></span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Montando la partición <b><em>/home/</em></b> </p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/sda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/home/</b></span></span></pre>
 
 
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-09-05%2002-55-35.png?raw=true" title="CodigoCristo" target="_blank">
