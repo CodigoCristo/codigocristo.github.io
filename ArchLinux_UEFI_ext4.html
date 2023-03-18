@@ -1148,14 +1148,6 @@ text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overf
 </p></span></h4>
 <hr>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Conexión cableada y Wifi.</b></p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">pacstrap /mnt dhcp networkmanager iwd</span></pre>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
@@ -1166,15 +1158,6 @@ font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14
 background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
 style="color: rgb(0, 0, 0);">pacstrap /mnt xf86-input-libinput</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Bluetooth en laptops (Opcional).</b></p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">pacstrap /mnt bluez bluez-utils pulseaudio-bluetooth</span></pre>
 
 
 
@@ -1425,6 +1408,9 @@ Ctrl + X para cerrar en nano<br></blockquote>
 <img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux23.png" alt="CodigoCristo " border="30" /></a>
 <br>
 
+
+
+
 <br>
 <h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">SUDOERS</span></h3>
 
@@ -1436,13 +1422,15 @@ Sudo tendrá efecto si nuestro usuario esta en la lista de <b>Sudoers</b>.</p>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Buscamos <b>root ALL=(ALL) ALL</b> y abajo ponemos nuestro usuario<br>
+Buscamos <b>root ALL=(ALL:ALL) ALL</b> y abajo ponemos nuestro usuario<br>
 Para que tenga permisos y mismos privilegios al ejecutar sudo.</p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">nombre_de_usuario ALL=(ALL) ALL</blockquote>
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">nombre_de_usuario ALL=(ALL:ALL) ALL</blockquote>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux24.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/9.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/9.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">Ctrl + W para buscar palabras en nano<br>
 Ctrl + O para guardar en nano<br>
@@ -1456,15 +1444,30 @@ Ctrl + X para cerrar en nano<br></blockquote>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Dynamic Host Configuration Protocol (DHCP)<br>
 El servidor proporciona a los clientes una dirección IP dinámica,<br>
-La máscara de subred, Gracias a "systemd" podemos activar ese servicio<br>
-Detección y configuración automática para conectarse a la red, respetar la mayúscula</p>
+La máscara de subred, Gracias a "systemd" podemos activar ese servicio<br><br><b>
+Detección y configuración automática para conectarse a la red</b></p>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Primero hay que instalar los programas : </p>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">systemctl enable dhcpcd  NetworkManager </span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">pacman -S dhcp dhcpcd networkmanager iwd</span></pre>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Activamos los servicios para que inicien con el sistema : </p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">systemctl enable dhcpcd NetworkManager</span></pre>
+
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si instalaron paquetes de Bluetooth activen el servicio: </p>
+<b>Si tiene dispositivos de Bluetooth</b> instelen los siguientes programas : </p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">pacman -S bluez bluez-utils pulseaudio-bluetooth</span></pre>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Activamos los servicios para que inicien con el sistema : </p>
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">systemctl enable bluetooth</span></pre>
 
@@ -1479,15 +1482,22 @@ Ordenarlos en base a su velocidad, y sobrescribir el archivo /etc/pacman.d/mirro
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">pacman -Sy reflector</span></pre>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">reflector --verbose --latest 15 --sort rate --save /etc/pacman.d/mirrorlist</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist</span></pre>
 
 
 <br>
 <h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">GRUB - Gestor de Arranque</span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Instalamos GRUB y osprober<br>
-<b>Os-prober</b> detecta más sistemas operativos si los tuviéramos, que usará grub para su menú (opcional)</p>
+Antes de iniciar con el grub debemos verificar que tenemos las <b>img de linux</b> : </p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">ls /boot/ </span></pre>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Si no tiene archivos con extensión <b>.img</b> vuelva instalar un kernel</p>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Os-prober</b> detecta más sistemas operativos siempre y cuando este montado la particion de arranque o sismte operativo con mount</p>
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">pacman -S grub efibootmgr os-prober </span></pre>
 
