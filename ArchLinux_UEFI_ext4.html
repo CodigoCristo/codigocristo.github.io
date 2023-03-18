@@ -1532,33 +1532,46 @@ En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><spa
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">nano /etc/default/grub</span></pre>
 
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/13.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/13.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux26.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Podemos <b>cambiar el tiempo de espera de Grub</b> en <b>TIMEOUT=5</b> y poner otro valor de seg.</p>
+Podemos <b>cambiar el tiempo de espera de Grub</b> y quitar el arranque silencioso.</p>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux27.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/14.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/14.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Borramos <b>quiet</b> ese parámetro para que muestre todo el texto de inicio del sistema</p>
+Si borramos <b>quiet</b> ese parámetro muestra todos los servicios de inicio del sistema</p>
 
 
+<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux27.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux27.png" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
+
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">GENERAR ARCHIVO DE CONFIGURACIÓN DE GRUB</span></h3>
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-mkconfig -o /boot/grub/grub.cfg</span></pre>
 
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux6.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<a href="https://img.webme.com/pic/c/codigocristo/gpt-archlinux6.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux6.png" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Como vemos GRUB detecta los archivos <b>.img</b> que están en <b>/boot/</b> podemos revisar con un <b>ls /boot/</b><br>
+Como vemos GRUB detecta las imagenes del kernel instalado <b>.img</b> que están en <b>/boot/</b><br>
 </p>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">ls /boot/</span></pre>
 
 
 <br>
