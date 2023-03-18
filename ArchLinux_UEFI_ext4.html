@@ -1562,14 +1562,26 @@ Si borramos <b>quiet</b> ese parámetro muestra todos los servicios de inicio de
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-mkconfig -o /boot/grub/grub.cfg</span></pre>
 
 
-<a href="https://img.webme.com/pic/c/codigocristo/gpt-archlinux6.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/gpt-archlinux6.png" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/15.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/15.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Como vemos GRUB detecta las imagenes del kernel instalado <b>.img</b> que están en <b>/boot/</b><br>
+Como vemos GRUB detecta las imagenes del kernel instalado <b>.img</b> que están en <b>/boot/</b> y detecta un error de os-prober<br>
 </p>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Eso lo podemos solucionar quitando un comentario en el archivo de configuración<br>
+</p>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">nano /etc/default/grub</span></pre>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/16.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/16.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-mkconfig -o /boot/grub/grub.cfg</span></pre>
 
 
 
