@@ -498,6 +498,17 @@ font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-colo
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-amdgpu libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vdpauinfo clinfo</span></pre>
 
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Si vas a usar AMDGPU PRO es necesario quitar Vulkan OpenSource y OpenCL OpenSource para evitar conflictos con los propietarios</b></p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -R vulkan-radeon lib32-vulkan-radeon opencl-mesa lib32-opencl-mesa</span></pre>
+
+
+
 <br>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
@@ -567,173 +578,16 @@ font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-colo
 <br>
 
 
-
-
 <hr>
 <h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Drivers Propietarios - 470.xx
-</span></h3>
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Driver + VDPAU + OpenCL + Vulkan </b> aqui no esta en los repositorios oficiales de arch, estan dentro de AUR en este caso usaremos YAY</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S nvidia-470xx-dkms nvidia-470xx-settings nvidia-470xx-utils lib32-nvidia-470xx-utils opencl-nvidia-470xx lib32-opencl-nvidia-470xx vdpauinfo clinfo </span></pre>
-
-
-
-<hr>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Drivers Propietarios - 390.xx
-</span></h3>
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Driver + VDPAU + OpenCL </b> no soporta ni vulkan ni cuda, <b>no son compatibles con Wayland acelerado por hardware</b>, lo que hace que las aplicaciones no nativas de Wayland sufran un bajo rendimiento en las sesiones de Wayland.<br>Tambien no esta en los repositorios oficiales de arch, estan dentro de AUR en este caso usaremos YAY</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils lib32-nvidia-390xx-utils opencl-nvidia-390xx lib32-opencl-nvidia-390xx vdpauinfo clinfo </span></pre>
-
-
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Es cierto que existe drivers como 340.xx o mas antiguos, el driver <b>nouveau</b> esta mucho más optimizado para esas graficas. Sin embargo, para grafias muy antiguas no esperen mucho rendimiento.</p>
-
-<br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Controlador de Nvidia con Kernel LTS:
-</span></h3>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia-lts nvidia-settings cuda nvidia-utils lib32-nvidia-utils opencl-nvidia  lib32-opencl-nvidia vdpauinfo clinfo</span></pre>
-
-
-<br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Controlador de Nvidia con Kernel Custom (zen-hardened-rt-otros):
-</span></h3>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia-dkms nvidia-settings cuda nvidia-utils lib32-nvidia-utils opencl-nvidia  lib32-opencl-nvidia vdpauinfo clinfo</span></pre>
-<hr>
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Supervisión de procesos de GPU - nvidia-smi
+Video Tutorial
 </span></h3>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>nvidia-smi usando en Xorg</b></p>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/6.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/6.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>nvidia-smi usando en Wayland</b></p>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/7.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/7.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-<hr>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Quitar Nouveau y arrancar el kernel con los modulos de Nvidia
-</span></h3>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Fuente: <a href="https://wiki.archlinux.org/title/NVIDIA#Early_loading" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/NVIDIA#Early_loading</a></b></p>
-
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Agregamos el modulo de <b>nouveau a la lista negra</b> para que no inicie ese modulo</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo echo "blacklist nouveau" > /etc/modprobe.d/nouveau_blacklist.conf</span></pre>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Agregamos los modulos de <b>nvidia nvidia_modeset nvidia_uvm nvidia_drm</b> en <b>MODULES</b> del archivo <b>/etc/mkinitcpio.conf</b> y guardamos el archivo.</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo nano /etc/mkinitcpio.conf</span></pre>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/8.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/8.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Volvemos a generar las img del kernel.</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo mkinitcpio -P </span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Volvemos a generar el archivo de configuración de GRUB.</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo grub-mkconfig -o /boot/grub/grub.cfg</span></pre>
-
-
-<hr>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Configuración automática en Xorg
-</span></h3>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo nvidia-xconfig</span></pre>
-
-
-
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si no puede encontrar el controlador específico instalado para el hardware, pruebe instalando un <b>controlador genérico</b>, que maneja una gran cantidad de chips pero <b>no incluye ninguna aceleración 2D o 3D</b> asegurando que tendra video si o si sea con cualquier hardware que tenga video</p>
-
-
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">pacman -S xf86-video-vesa xf86-video-fbdev</span></pre>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MZYI7z7dBL4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 
