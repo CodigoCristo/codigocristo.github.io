@@ -370,20 +370,8 @@ font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-colo
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Identificando el nombre de tu gráfica :
+xf86-video-ati
 </span></h3>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Con el siguiente comando nos dará información de nuestra tarjeta gráfica</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">lspci | grep VGA</span></pre>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/12.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/12.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Si tu gráfica pertenece a la <b>Microarquitectura TeraScale</b> o menores utiliza <b>xf86-video-ati</b></p>
@@ -393,6 +381,13 @@ Si tu gráfica pertenece a la <b>Microarquitectura TeraScale</b> o menores utili
 <img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/11.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+xf86-video-amdgpu
+</span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Si tu gráfica pertenece a la <b>Microarquitectura GCN - RDNA</b> y arquitecturas más actuales o futuras utiliza <b>xf86-video-amdgpu</b></p>
@@ -408,46 +403,29 @@ Si tu gráfica pertenece a la <b>Microarquitectura GCN - RDNA</b> y arquitectura
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-La misma documentación dice algunos chips gráficos como la <b>Microarquitectura GCN1 - GCN2</b> es en modo experimental puede funcionar y aveces no<br><br>
-Lo más seguro es que uses <b>xf86-video-amdgpu</b> con la <b>Microarquitectura GCN3</b> y seguramente se debe ya que AMD solo brinda soporte a <b>GCN 4th gen para arriba</b></p>
+La misma documentación dice algunos chips gráficos como la <b>Microarquitectura GCN1 - GCN2</b> es en modo experimental puede funcionar y aveces no, asi que lo más que seguro es que funcione con <b>xf86-video-ati</b><br><br>
+Lo más seguro es que uses <b>xf86-video-amdgpu y AMDGPU PRO</b> con la <b>Microarquitectura GCN3 hasta lo mas actual</b> y seguramente se debe ya que AMD solo brinda soporte a <b>GCN 4th gen para arriba</b></p>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ingresando a <br><b><a href="https://www.nvidia.es/Download/index.aspx?lang=es" title="CodigoCristo" target="_blank">https://www.nvidia.es/Download/index.aspx?lang=es</b></a></p>
 <br>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/4.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/4.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/5.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/5.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Guardamos esta información que nuestra <b>Nvidia RTX 2080</b><br>usa la versión de driver <b>525.xx</b> el controlador más actual a la fecha</p>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Identificando el nombre de tu gráfica :
+</span></h3>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora usando una <b>Nvidia GT 610</b> usando <b>lspci</b></p>
+    Con el siguiente comando nos dará información de nuestra tarjeta gráfica</p>
 
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">lspci | grep VGA</span></pre>
 
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux45.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux45.png" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/13.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/13.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/3.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/3.png?raw=true" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Guardamos esta información que nuestra <b>Nvidia GT 610</b> usa la versión de driver <b>390.xx</b></p>
 
 
 <br>
@@ -462,7 +440,7 @@ Instalación
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
 counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
-border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>Driver = incluye aceleración 2D o 3D </b>
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>Driver = incluye aceleración 2D o 3D para Xorg o Wayland</b>
 ● <b>OpenCL = Uso de aplicaciones con la GPU</b>
 ● <b>OpenGL o Vulkan = producen gráficos 2D y 3D</b>
 ● <b>VDPAU GPU = Decodifica y codifica video con la GPU</b>
@@ -475,16 +453,32 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Drivers Open Sources
+Drivers Open Sources ATI
 </span></h3>
 
 <br>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Driver + VDPAU </b> no sorpora OpenCL ni vulkan</p>
+<b>Driver + VDPAU + OpenCL</b> no sorpora vulkan</p>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-nouveau mesa-vdpau libva-mesa-driver vdpauinfo clinfo</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-ati opencl-mesa lib32-opencl-mesa libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vdpauinfo clinfo</span></pre>
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Drivers Open Sources AMDGPU
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Driver + VDPAU + OpenCL + Vulkan</b> no soporta la codificación de video con GPU o transmisiones con GPU</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon opencl-mesa lib32-opencl-mesa libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vdpauinfo clinfo</span></pre>
 
 
 
@@ -493,16 +487,48 @@ font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-colo
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Drivers Propietarios - 500.xx
+Drivers Propietarios AMDGPU PRO
 </span></h3>
 
 <br>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Driver + VDPAU + OpenCL + Vulkan + CUDA</b></p>
+<b>Driver Progl + VDPAU + OpenCL + Vulkan PRO</b></p>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia nvidia-settings cuda nvidia-utils lib32-nvidia-utils opencl-nvidia  lib32-opencl-nvidia vdpauinfo clinfo</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-amdgpu libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vdpauinfo clinfo</span></pre>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Instalando todos los paquetes de AMDGPU PRO</b></p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">git clone https://aur.archlinux.org/amdgpu-pro-installer.git && cd amdgpu-pro-installer && makepkg -si</span></pre>
+
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Instalando OpenCL AMD y Vulkan prefixes</b></p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S opencl-amd amd-vulkan-prefixes</span></pre>
+
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Utilizando el Driver privativo + Vulkan pro en STEAM</b></p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">progl vk_pro steam</span></pre>
+
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Utilizando Davinci Resolve usando OpenCL AMD</b></p>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">progl /opt/resolve/bin/resolve</span></pre>
+
 
 
 
