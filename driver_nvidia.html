@@ -382,18 +382,26 @@ Ingresando a <br><b><a href="https://www.nvidia.es/Download/index.aspx?lang=es" 
 <br>
 <br>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/3.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/3.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/5.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/5.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Guardamos esta información que nuestra <b>Nvidia RTX 2080</b><br>usa la versión de driver <b>525.xx</b> el controlador más actual a la fecha</p>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-En el primer ejemplo estoy usando una <b>Nvidia GT 610</b> usando <b>lspci</b></p>
+Ahora usando una <b>Nvidia GT 610</b> usando <b>lspci</b></p>
 
 
 <a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux45.png" title="CodigoCristo" target="_blank">
 <img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux45.png" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/3.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/3.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
@@ -402,31 +410,13 @@ En el primer ejemplo estoy usando una <b>Nvidia GT 610</b> usando <b>lspci</b></
 Guardamos esta información que nuestra <b>Nvidia GT 610</b> usa la versión de driver <b>390.xx</b></p>
 
 
-
-
-
-
-
-
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">pacman -Ss xf86-video</span></pre>
-
-
 <br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-El <b>kernel de Linux incluye controladores de video de código abierto</b> y soporte para framebuffers acelerados por hardware. Sin embargo, se requiere soporte optimizado para OpenGL y aceleración 2D/3D en Xorg o Wayland</p>
-
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Por ese motivo es necesario instalar un controlador adecuado de código abierto o código cerrado</p>
-
-
-
-
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Instalación
+</span></h3>
 
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
@@ -438,12 +428,135 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 ● <b>VDPAU GPU = Decodifica y codifica video con la GPU</b>
 </blockquote>
 
+<hr>
 
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Drivers Open Sources
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Driver + VDPAU </b> no sorpora OpenCL ni vulkan</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-nouveau mesa-vdpau libva-mesa-driver vdpauinfo clinfo</span></pre>
+
+
+
+<hr>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Drivers Propietarios - 500.xx
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Driver + VDPAU + OpenCL + Vulkan + CUDA</b></p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia nvidia-settings cuda nvidia-utils lib32-nvidia-utils opencl-nvidia  lib32-opencl-nvidia vdpauinfo clinfo</span></pre>
+
+
+
+
+
+<hr>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Drivers Propietarios - 470.xx
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Driver + VDPAU + OpenCL + Vulkan </b> aqui no esta en los repositorios oficiales de arch, estan dentro de AUR en este caso usaremos YAY</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S nvidia-470xx-dkms nvidia-470xx-settings nvidia-470xx-utils lib32-nvidia-470xx-utils opencl-nvidia-470xx lib32-opencl-nvidia-470xx vdpauinfo clinfo </span></pre>
+
+
+
+<hr>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Drivers Propietarios - 390.xx
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Driver + VDPAU + OpenCL </b> no soporta ni vulkan ni cuda, tambien no esta en los repositorios oficiales de arch, estan dentro de AUR en este caso usaremos YAY</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils lib32-nvidia-390xx-utils opencl-nvidia-390xx lib32-opencl-nvidia-390xx vdpauinfo clinfo </span></pre>
+
+
+
+<hr>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Lista oficial en la documentación:
+</span></h3>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b><a href="https://wiki.archlinux.org/title/NVIDIA" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/Nouveau</a><br>
+<a href="https://wiki.archlinux.org/title/NVIDIA" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/NVIDIA</a></b></p>
 
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/video_1.png?raw=true" title="CodigoCristo" target="_blank">
 <img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/video_1.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<hr>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Es cierto que existe drivers como 340.xx o mas antiguos, el driver <b>nouveau</b> esta mucho más optimizado para esas graficas. Sin embargo, para grafias muy antiguas no esperen mucho rendimiento.</p>
+
 <br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Controlador de Nvidia con Kernel LTS:
+</span></h3>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia-lts nvidia-settings cuda nvidia-utils lib32-nvidia-utils opencl-nvidia  lib32-opencl-nvidia vdpauinfo clinfo</span></pre>
+
+
 <br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Controlador de Nvidia con Kernel Custom (zen-hardened-rt-otros):
+</span></h3>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia-dkms nvidia-settings cuda nvidia-utils lib32-nvidia-utils opencl-nvidia  lib32-opencl-nvidia vdpauinfo clinfo</span></pre>
+<hr>
+
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Supervisión de procesos de GPU
+</span></h3>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>nvidia-smi usando en Xorg</b></p>
 
 
 
@@ -459,34 +572,8 @@ Si no puede encontrar el controlador específico instalado para el hardware, pru
 
 
 
-<hr>
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/kernel_arch.html" title="CodigoCristo" target="_blank">
-<b>+ Instalar controladores gráficos de NVIDIA</b></a></p>
-</p></span></h4>
-<hr>
 
 
-
-<hr>
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/kernel_arch.html" title="CodigoCristo" target="_blank">
-<b>+ Instalar controladores gráficos de AMDGPU/ATI</b></a></p>
-</p></span></h4>
-<hr>
-
-
-
-
-<hr>
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/kernel_arch.html" title="CodigoCristo" target="_blank">
-<b>+ Instalar controladores gráficos de INTEL</b></a></p>
-</p></span></h4>
-<hr>
 
 
 
