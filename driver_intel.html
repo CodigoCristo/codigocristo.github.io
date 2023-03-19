@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <!-- favicon
     ============================================ -->        
     <link rel="shortcut icon" type="image/x-icon" href="https://dl.dropboxusercontent.com/s/vhn33vuup5xp4vk/favicon.ico">
@@ -325,8 +326,7 @@
 
 
 
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 20px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 2.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">Instalación del controlador
-de Vídeo</h4>
+<h4 style="box-sizing: border-box; margin: 1.5rem 0px 20px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 2.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">Instalación del controlador INTEL</h4>
 
 
 
@@ -348,113 +348,131 @@ background-color: rgb(255, 255, 255);"><a href="https://t.me/ArchLinuxCristo" ta
 
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Con el siguiente comando nos dará información de nuestra tarjeta gráfica</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">lspci | grep VGA</span></pre>
-
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux45.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux45.png" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-O también en <b>neofetch</b> en la parte que dice GPU...</p>
-
-
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux46.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux46.png" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-
-
-
+<hr>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Lista oficial en la documentación:
+</span></h3>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Puede buscar en la base de datos de paquetes una lista completa de controladores de video de código abierto:</p>
+<b><a href="https://wiki.archlinux.org/title/intel_graphics" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/intel_graphics</a><br>
+<a href="https://wiki.archlinux.org/title/GPGPU" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/GPGPU</a><br>
+<a href="https://wiki.archlinux.org/title/Vulkan" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/Vulkan</a><br>
+<a href="https://wiki.archlinux.org/title/Hardware_video_acceleration" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/Hardware_video_acceleration</a></b></p>
 
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">pacman -Ss xf86-video</span></pre>
-
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-El <b>kernel de Linux incluye controladores de video de código abierto</b> y soporte para framebuffers acelerados por hardware. Sin embargo, se requiere soporte optimizado para OpenGL y aceleración 2D/3D en Xorg o Wayland</p>
-
-
-<br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Por ese motivo es necesario instalar un controlador adecuado de código abierto o código cerrado</p>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/video_1.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/video_1.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<hr>
 
 
 
-
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Instalación
+</span></h3>
 
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
 counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
-border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>Driver = incluye aceleración 2D o 3D </b>
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>Driver = incluye aceleración 2D o 3D para Xorg o Wayland</b>
 ● <b>OpenCL = Uso de aplicaciones con la GPU</b>
 ● <b>OpenGL o Vulkan = producen gráficos 2D y 3D</b>
 ● <b>VDPAU GPU = Decodifica y codifica video con la GPU</b>
 </blockquote>
 
+<hr>
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Drivers Open Sources Intel
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Driver + Vulkan</b></p>
 
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/video_1.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/video_1.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S xf86-video-intel vulkan-intel lib32-vulkan-intel vulkan-tools mesa lib32-mesa</span></pre>
+
+
 <br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+VA-API Intel
+</span></h3>
+
+
 <br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>VDPAU Broadwell+ iGPUs</b> con soporte de procesadores 5gen hasta procesadores mas actuales</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S intel-media-driver libva-utils vdpauinfo clinfo</span></pre>
+
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>VDPAU para G45 y la familia HD Graphics</b> con soporte de procesadores G45 y HD Graphics para procesadores antiguos</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S libva-intel-driver libva-utils vdpauinfo clinfo</span></pre>
+
+
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+OpenCL Intel
+</span></h3>
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>OpenCL Open Source</b> con soporte de todos los procesadores Intel</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S opencl-mesa lib32-opencl-mesa </span></pre>
 
 
 
 <br>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si no puede encontrar el controlador específico instalado para el hardware, pruebe instalando un <b>controlador genérico</b>, que maneja una gran cantidad de chips pero <b>no incluye ninguna aceleración 2D o 3D</b> asegurando que tendra video si o si sea con cualquier hardware que tenga video</p>
+<b>OpenCL Open Source</b> con soporte de procesadores Intel HD Graphics GPU de Gen8 (Broadwell) y mas actuales</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo pacman -S intel-compute-runtime </span></pre>
+
+
+<br>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>OpenCL Privativo</b> con soporte de procesadores Intel de Gen7 (Broadwell) y los mas actuales (e.g. Ivy Bridge, Haswell).</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S intel-opencl</span></pre>
 
 
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">pacman -S xf86-video-vesa xf86-video-fbdev</span></pre>
 
 
 
-<hr>
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/driver_nvidia.html" title="CodigoCristo" target="_blank">
-<b>+ Instalar controladores gráficos de NVIDIA</b></a></p>
-</p></span></h4>
-<hr>
-
-
-
-<hr>
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/driver_amd.html" title="CodigoCristo" target="_blank">
-<b>+ Instalar controladores gráficos de AMDGPU/ATI</b></a></p>
-</p></span></h4>
-<hr>
-
-
-
-
-<hr>
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/driver_intel.html" title="CodigoCristo" target="_blank">
-<b>+ Instalar controladores gráficos de INTEL</b></a></p>
-</p></span></h4>
-<hr>
 
 
 
@@ -471,6 +489,8 @@ text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overf
 
 
 <!-- FIN DE CONTENIDO -->  
+
+
 
 
 
@@ -546,7 +566,6 @@ s.setAttribute('data-timestamp', +new Date());
                     <br>
                   </ul>
                 </div>
-
                 
               </div>
             </div>
