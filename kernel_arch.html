@@ -325,7 +325,7 @@
 
 
 
-<h4 style="box-sizing: border-box; margin: 1.5rem 0px 20px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 2.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">Conexión a Internet por Wifi</h4>
+<h4 style="box-sizing: border-box; margin: 1.5rem 0px 20px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 2.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">Kernels Oficiales disponibles para Arch Linux</h4>
 
 
 
@@ -346,31 +346,45 @@ background-color: rgb(255, 255, 255);"><a href="https://t.me/ArchLinuxCristo" ta
 
 
 
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
-font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si desea conectarse por wifi, es conveniente primero verificar si se ha cargado correctamente el controlador 
-de la tarjeta wifi. Compruebe que en la salida del siguiente comando exista un fichero que inicie con la letra 
-<em><b>wl...</b></em></p>
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Lista de kernels
+</span></h3>
 
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
-counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0;
- font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">wlan0<br>wlp2s0<br>wlo1<br>Otros...</blockquote>
+counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
+font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
+border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>linux</b>
+● <b>linux-hardened</b>
+● <b>linux-lts</b>
+● <b>linux-rt</b>
+● <b>linux-zen</b>
+</blockquote>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">ls /sys/class/net | grep wl</span></pre>
-
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si no existe ningún fichero que inicie con la letra <em><b>wl </b></em>,entonces no podrá realizar la instalación vía wifi.
 <br>
-Si por el contrario el fichero existe entonces será posible conectarse a Internet vía wifi.<br>
-</p>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Stable
+</span></h3>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Núcleo y módulos Vanilla Linux, con algunos parches aplicados.</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S linux linux-headers mkinitcpio linux-firmware</span></pre>
+
+
+
+
+
 
 
 
@@ -379,105 +393,133 @@ Si por el contrario el fichero existe entonces será posible conectarse a Intern
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Conexión de Wifi con NMCLI o IWD
+Hardened
 </span></h3>
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Un kernel de Linux centrado en la seguridad que aplica un conjunto de parches de refuerzo para mitigar las vulnerabilidades del kernel y del espacio de usuario.</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S linux-hardened linux-hardened-headers mkinitcpio linux-firmware</span></pre>
+
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-NMCLI
+Longterm LTS
 </span></h3>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-NMCLI es gracias a NetworkManager, Fuente: <b><a href="https://wiki.archlinux.org/title/NetworkManager#nmcli_examples" target="_blank">https://wiki.archlinux.org/title/NetworkManager#nmcli_examples</a></b></p>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Kernel y módulos de Linux con soporte a largo Soporte.</p>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Activamos el servicio de NetworkManager :</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">systemctl start --now NetworkManager.service</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S linux-lts linux-lts-headers mkinitcpio linux-firmware</span></pre>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora si podemos usar nmcli :</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">nmcli dev wifi list</span></pre>
-
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux34.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Si la red tiene espacios solo ponemos comilla simple o doble comillas en el bssid:</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">nmcli device wifi connect 'NombreDeRed' password 'contraseña'</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Verificamos la conexión:</p>
-
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">nmcli dev status</span></pre>
-
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux35.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
 
 
 
 <br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-IWD
+Zen Kernel
 </span></h3>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-IWD nos brinda el programa <b>iwctl</b> Fuente: <b><a href="https://wiki.archlinux.org/title/iwd" target="_blank">https://wiki.archlinux.org/title/iwd</a></b><br>
-Para saber el nombre de <b>device</b> debemos revisar en <b>ls /sys/class/net</b><br>Asi obtenemos el nombre de nuestro dispositivo de red</b></p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">ls /sys/class/net | grep w</span></pre>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-En mi caso fue <b>wlo1</b></p>
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Resultado de un esfuerzo de colaboración de los piratas informáticos del kernel para proporcionar el mejor kernel de Linux posible para los sistemas cotidianos.</p>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Activamos el servicio de IWD para poder usuarlo :</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">systemctl start --now iwd.service</span></pre>
-
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ahora si podemos usar IWD :</p>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S linux-zen linux-zen-headers mkinitcpio linux-firmware</span></pre>
 
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">iwctl --passphrase 'contraseña' station wlo1 connect 'NombreDeRed'</span></pre>
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Realtime kernel
+</span></h3>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Mantenido por un pequeño grupo de desarrolladores principales liderados por Ingo Molnar. Este parche permite adelantarse a casi todo el kernel, con la excepción de unas pocas regiones de código muy pequeñas.</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S linux-rt linux-rt-headers mkinitcpio linux-firmware</span></pre>
+
+<br>
+<br>
+<h4 style="box-sizing: border-box; margin: 1.5rem 0px 20px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 2.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">IMPORTANTE</h4>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Es importante saber que para instalar drivers para la grafica, ethernet y otros componentes,<br>
+cambia los nombres de los drivers, si tienes el <b>kernel lts va driver-lts</b> para otros <b>kernel como ZEN o RT o HARDENED driver-dkms</b></p>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Aqui unos ejemplos con nvidia o r8168 (ethernet)</p>
+
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Kernel Linux
+</span></h3>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia r8168</span></pre>
 
 
 
 
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Kernel LTS
+</span></h3>
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia-lts r8168-lts</span></pre>
 
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; "><br><b>Antes de hacer alguna instalación siempre actualizamos el sistema con:</b><br></p>
+<br>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Kernel ZEN - RT - HARDENED - otros
+</span></h3>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">pacman -Syu</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo pacman -S nvidia-dkms r8168-dkms</span></pre>
+
+<br>
+<br>
+<h4 style="box-sizing: border-box; margin: 1.5rem 0px 20px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 2.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">CAMBIAR EL KERNEL EXISTENTE</h4>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Si ya tienes un kernel instalado solo basta en instalar el kernel que necesitas y al final de la instalación te pedira eliminar el kernel anteriormente instalado.<br>
+Pero es importante volver a generar la configuración de grub para que reconozca las nuevas <b>.img</b> del kernel recien instalado con el siguiente comando :</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@nombre_de_pc ~]# <span style="color: rgb(0, 0, 0);">sudo grub-mkconfig -o /boot/grub/grub.cfg</span></pre>
 
 
 
