@@ -497,7 +497,7 @@ Drivers Propietarios - 390.xx
 <br>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>Driver + VDPAU + OpenCL </b> no soporta ni vulkan ni cuda, tambien no esta en los repositorios oficiales de arch, estan dentro de AUR en este caso usaremos YAY</p>
+<b>Driver + VDPAU + OpenCL </b> no soporta ni vulkan ni cuda, <b>no son compatibles con Wayland acelerado por hardware</b>, lo que hace que las aplicaciones no nativas de Wayland sufran un bajo rendimiento en las sesiones de Wayland.<br>Tambien no esta en los repositorios oficiales de arch, estan dentro de AUR en este caso usaremos YAY</p>
 
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">yay -S nvidia-390xx-dkms nvidia-390xx-settings nvidia-390xx-utils lib32-nvidia-390xx-utils opencl-nvidia-390xx lib32-opencl-nvidia-390xx vdpauinfo clinfo </span></pre>
@@ -550,13 +550,61 @@ Controlador de Nvidia con Kernel Custom (zen-hardened-rt-otros):
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Supervisión de procesos de GPU
+Supervisión de procesos de GPU - nvidia-smi
 </span></h3>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
 font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 <b>nvidia-smi usando en Xorg</b></p>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/6.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/6.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
+
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>nvidia-smi usando en Wayland</b></p>
+
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/7.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/video/7.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
+
+
+<hr>
+<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
+padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
+font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
+<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+Quitar Nouveau y arrancar el kernel con los modulos de Nvidia
+</span></h3>
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>Fuente: <a href="https://wiki.archlinux.org/title/NVIDIA#Early_loading" title="CodigoCristo" target="_blank">https://wiki.archlinux.org/title/NVIDIA#Early_loading</a></b></p>
+
+
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Agregamos el modulo de <b>nouveau a la lista negra</b> para que no inicie ese modulo</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo echo "blacklist nouveau" > /etc/modprobe.d/nouveau_blacklist.conf</span></pre>
+
+
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); 
+font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+Agregamos los modulos de <b>nvidia nvidia_modeset nvidia_uvm nvidia_drm</b> en <b>MODULES</b> del archivo <b>/etc/mkinitcpio.conf</b> y guardamos el archivo.</p>
+
+
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[nombre_de_usuario@nombre_de_pc ~]$ <span style="color: rgb(0, 0, 0);">sudo nano /etc/mkinitcpio.conf</span></pre>
+
 
 
 
