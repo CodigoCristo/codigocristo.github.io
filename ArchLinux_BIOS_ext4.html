@@ -922,8 +922,8 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Podemos revisarlo con <b>fdisk -l</b></p>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/8.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/8.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/8_1.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/8_1.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 
 
@@ -1025,7 +1025,7 @@ style="color: rgb(0, 0, 0);">mount /dev/vda3 /mnt<span style="color: rgb(255, 0,
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Para montar las particiones necesitamos crear antes las rutas lógicas de montaje.<br>
-Necesitamos hacer un chroot dentro de <b><em>/mnt/</em></b> <br>Para el resto de directorios <b><em>/boot/efi</em></b> o <b><em>/home/</em></b>, etc...
+Necesitamos hacer un chroot dentro de <b><em>/mnt/</em></b> <br>Para el resto de directorios <b><em>/boot/</em></b> o <b><em>/home/</em></b>, etc...
 <br></p>
 
 
@@ -1034,7 +1034,7 @@ Necesitamos hacer un chroot dentro de <b><em>/mnt/</em></b> <br>Para el resto de
 font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
 line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-1. Creamos la carpeta para UEFI 
+1. Creamos la carpeta de arranque Boot 
 </span></h3>
 
 
@@ -1042,7 +1042,7 @@ line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255,
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
 background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">mkdir -p /mnt/boot/efi/</span></pre>
+style="color: rgb(0, 0, 0);">mkdir -p /mnt/boot/</span></pre>
 
 
 
@@ -1057,12 +1057,12 @@ style="color: rgb(0, 0, 0);">mkdir -p /mnt/boot/efi/</span></pre>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Montando la partición de Arranque <b><em>/boot/efi/</em></b> </p>
+Montando la partición de Arranque <b><em>/boot/</em></b> </p>
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
 font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
 color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/vda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/boot/efi/</b></span></span></pre>
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">mount /dev/vda1 /mnt<span style="color: rgb(255, 0, 0);"><b>/boot/</b></span></span></pre>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Luego de formatear y montar las particiones podemos revisarlo que todo este bien con <b><em>lsblk</em></b> </p>
