@@ -668,14 +668,14 @@ overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Tabla de partición para UEFI
+Tabla de partición para BIOS LEGACY
 </span></h3>
 
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Discos Duros en GPT permite mas de 128 particiones primarias<br>
+Discos Duros en MBR permite 4 particiones primarias y la ultima primaria puede ser extendida para ampliar mas particiones<br>
 <br>
-<b>Para usar esta tecnologia depende de tu placa madre si soporta GPT y UEFI ya que es para sistemas modernos y actuales.</b><br>
+<b>MBR o GPT depende de tu placa madre si soporta esas tecnologias.</b><br>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Para consultar la tabla de particiones  que tiene su disco duro donde va a instalar el Sistema Operativo use el siguiente comando:</p>
@@ -720,11 +720,11 @@ overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
 padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
 font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; 
 overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted -l | egrep "/dev/|msdos|gpt"</span></pre>
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">fdisk -l"</span></pre>
 
 <br>
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-18-20.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2008-18-20.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/3.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/3.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
@@ -761,44 +761,68 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 
 
 
+
+
+
+
+
+
+
+
 <h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
 padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Ejemplos de particionados en UEFI - GPT
+Ejemplos de particionados en BIOS/LEGACY - MBR
 </span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>> Ejemplo 1 de particionado en GPT</b></p>
+<b>>> Ejemplo 1 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
-/dev/sda2  ROOT - HOME - ETC...</blockquote>
-
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT - ROOT - HOME - ETC...)</blockquote>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>> Ejemplo 2 de particionado en GPT</b></p>
+<b>>> Ejemplo 2 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
 /dev/sda2  ROOT - HOME - ETC...
 /dev/sda3  [SWAP]</blockquote>
 
-
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>> Ejemplo 3 de particionado en GPT</b></p>
+<b>>> Ejemplo 3 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
 /dev/sda2  ROOT
 /dev/sda3  [SWAP]
 /dev/sda4  HOME
 </blockquote>
 
+<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<b>>> Ejemplo 4 de particionado en MBR</b></p>
+
+<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+/dev/sda2  ROOT
+/dev/sda3  [SWAP]
+/dev/sda4  HOME
+/dev/sda5  Extendida (esta no se monta solo es la conexión)
+/dev/sda6  Extendida
+/dev/sda7  Extendida
+</blockquote>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>● La documentación oficial nos recomienda usar en GPT la siguiente estructura</b></p>
+<b>>> La documentación oficial nos recomienda usar en MBR la siguiente estructura <<</b></p>
 
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" alt="CodigoCristo " border="30" /></a>
-<br>
+
+<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" alt="CodigoCristo " border="30" /></a>
+
+
+
+
+
+
+
+
 
 
 
@@ -848,19 +872,20 @@ style="color: rgb(0, 0, 0);">cfdisk /dev/vda</span></pre>
 font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; 
 line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-1. Para UEFI con discos con GPT
+1. Para BIOS/LEGACY con discos con MBR
 </span></h3>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/1.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/1.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/4.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/4.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
-<br>
+
 
 <blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
 counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
 border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Vamos empezar eliminando las particiones en <b>[ Eliminar ]</b> y creando nuevas en <b>[ Nueva ]</b>
 ● Podemos crear varias particiones: <b>vda1, vda2, vda3...</b>
+● Debemos marcar cual es la partición de arranque en <b>[ Iniciable ]</b>
 ● Podemos crear las particiones y cambiar el tipo de partición en <b>[ Tipo ]</b>
 ● <b>Flecha Arriba / Abajo - Flechas Derecha / Izquierda</b> - para movernos en cfdisk
 </blockquote>
