@@ -1067,8 +1067,8 @@ color: rgba(100, 100, 100, 0.7);">
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 Luego de formatear y montar las particiones podemos revisarlo que todo este bien con <b><em>lsblk</em></b> </p>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/5.png?raw=true" title="CodigoCristo" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/5.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/9.png?raw=true" title="CodigoCristo" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/9.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 
 
@@ -1611,16 +1611,15 @@ Si no tiene archivos con extensión <b>.img</b> vuelva instalar un kernel</p>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
 <b>Os-prober</b> detecta más sistemas operativos siempre y cuando este montado la particion de arranque o sistema operativo con mount</p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">pacman -S grub efibootmgr os-prober </span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">pacman -S grub os-prober</span></pre>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Aquí solo importa recordar cual fue la particion de EFI y cual fue la carpeta que crearon para EFI<br>
-En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><span style="color: rgb(255, 0, 0);"><b>/boot/efi/</b></span> Entonces instalamos grub en <b>/boot/efi/</b></p>
+Aquí solo importa recordar cual fue el disco donde instalamos nuestro sistema Arch<br>
+En este caso fue <span style="color: rgb(255, 0, 0);"><b>/dev/vda</b></span> <b>de 50Gb</b> </p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=Arch</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=i386-pc /dev/vda</span></pre>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=x86_64-efi --efi-directory=/efi --removable</span></pre>
 
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/12.png?raw=true" title="CodigoCristo" target="_blank">
 <img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/12.png?raw=true" alt="CodigoCristo " border="30" /></a>
