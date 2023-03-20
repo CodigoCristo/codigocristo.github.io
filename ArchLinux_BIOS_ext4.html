@@ -346,8 +346,8 @@ background-color: rgb(255, 255, 255);"><a href="https://t.me/ArchLinuxCristo" ta
 
 
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202023-02-25%2004-09-26.png?raw=true" title="Img" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202023-02-25%2004-09-26.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/1.png?raw=true" title="Img" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/1.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
@@ -392,12 +392,12 @@ font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-c
 font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
 font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
 <span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Comprobando si su sistema es UEFI : </span></h3>
+Comprobando si su sistema es BIOS LEGACY : </span></h3>
 
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
 overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
 font-size: 15px; background-color: rgb(255, 255, 255);">
-Compruebe el tipo de arranque, ejecutando este comando para ver una lista con <b>ls</b></p>
+Ya con el inicio del logo a colores ya demuestra que inicias como Bios, pero compruebe el tipo de arranque, ejecutando este comando para ver una lista con <b>ls</b></p>
 
 <pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
 font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
@@ -409,10 +409,10 @@ style="color: rgb(0, 0, 0);">ls /sys/firmware/efi/efivars</span></pre>
 <p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
 overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
 font-size: 15px; background-color: rgb(255, 255, 255);">
-Si hay archivos en <b> efivars</b> significa que tu sistema es <b>UEFI/EFI</b></p>
+<b>Si no hay archivos en efivars</b> significa que tu sistema es <b>BIOS/LEGACY</b></p>
 
-<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2005-43-10.png?raw=true" title="Img" target="_blank">
-<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/Captura%20desde%202022-08-31%2005-43-10.png?raw=true" alt="CodigoCristo " border="30" /></a>
+<a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/2.png?raw=true" title="Img" target="_blank">
+<img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/bios/2.png?raw=true" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
 
@@ -709,7 +709,7 @@ Tenga en cuenta que <b>este procedimiento eliminará la información del disposi
 padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
 font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; 
 overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted /dev/vda mklabel gpt</span></pre>
+<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted /dev/vda mklabel msdos</span></pre>
 
 
 
