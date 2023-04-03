@@ -1592,10 +1592,10 @@ Si no tiene archivos con extensión <b>.img</b> vuelva instalar un kernel</p>
 Aquí solo importa recordar cual fue la particion de EFI y cual fue la carpeta que crearon para EFI<br>
 En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><span style="color: rgb(255, 0, 0);"><b>/boot/efi/</b></span> Entonces instalamos grub en <b>/boot/efi/</b></p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=Arch</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Arch</span></pre>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=x86_64-efi --efi-directory=/efi --removable</span></pre>
+<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">[root@archiso /]# <span style="color: rgb(0, 0, 0);">grub-install --target=x86_64-efi --efi-directory=/boot/efi --removable</span></pre>
 
 <a href="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/12.png?raw=true" title="CodigoCristo" target="_blank">
 <img src="https://github.com/CodigoCristo/codigocristo.github.io/blob/main/img/uefi/12.png?raw=true" alt="CodigoCristo " border="30" /></a>
