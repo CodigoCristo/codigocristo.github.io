@@ -135,14 +135,21 @@ img {
     overflow: hidden;
 }
 
-p {
-    margin: 0 0 20px;
-}
+p   {
+    box-sizing: border-box;
+    margin: 0px 0px 15px;
+    padding: 0px;
+    outline: 0px;
+    overflow-wrap: break-word;
+    color: rgb(50, 50, 50);
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    }
+
 
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
     margin: 0 0 22px;
@@ -161,6 +168,21 @@ h2 {
 
 h3 {
     font-size: 26px;
+}
+
+h4 {
+            box-sizing: border-box;
+            margin: 1.5rem 0px 20px;
+            font-weight: 800;
+            padding: 0px;
+            outline: 0px;
+            font-family: Muli, sans-serif;
+            color: rgb(60, 66, 79);
+            text-rendering: optimizelegibility;
+            font-size: 2.5rem;
+            line-height: 2.25rem;
+            overflow-wrap: break-word;
+            background-color: rgb(255, 255, 255);
 }
 
 a {
