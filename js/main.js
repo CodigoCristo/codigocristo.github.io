@@ -223,9 +223,9 @@ $('.rc-carousel').each(function() {
      jQuery MeanMenu
      ------------------------------ */
 
-    $('nav#dropdown').meanmenu({
-        siteLogo: "<a href='index.html'><img src='img/logo.png' alt='image' width='65' height='65' style='padding: 5px;' /></a>"
-    });
+$('nav#dropdown').meanmenu({
+    siteLogo: "<a href='#' style='color: white; font-size: 20px; font-weight: bold; text-decoration: none; padding: 10px; display: inline-block;'>Código Cristo</a>"
+});
 
     $('#nav li.has-submenu > a').on('click', function(e) {
         e.preventDefault();
