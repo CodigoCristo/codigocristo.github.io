@@ -163,12 +163,45 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    box-sizing: border-box;
+    margin: 1.5rem 0px 16px;
+    padding: 0px;
+    outline: 0px;
+    font-family: Muli, sans-serif;
+    color: rgb(60, 66, 79);
+    text-rendering: optimizelegibility;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    overflow-wrap: break-word;
 }
 
 h3 {
-    font-size: 26px;
+    box-sizing: border-box;
+    margin: 1.5rem 0px 16px;
+    padding: 0px;
+    outline: 0px;
+    font-family: Muli, sans-serif;
+    color: rgb(60, 66, 79);
+    text-rendering: optimizelegibility;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    overflow-wrap: break-word;
 }
+
+.h3sub {
+    box-sizing: border-box;
+    margin: 1.5rem 0px 16px;
+    padding: 0px;
+    outline: 0px;
+    font-family: Muli, sans-serif;
+    color: rgb(60, 66, 79);
+    text-rendering: optimizelegibility;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    overflow-wrap: break-word;
+    background-color: rgb(255, 255, 255);
+}
+
 
 h4 {
             box-sizing: border-box;
@@ -183,6 +216,34 @@ h4 {
             line-height: 2.25rem;
             overflow-wrap: break-word;
             background-color: rgb(255, 255, 255);
+}
+
+pre {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 11px 20px;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 14px;
+    background: rgb(245, 245, 245);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    color: rgba(100, 100, 100, 0.7);
+}
+
+.root { color: red; }
+
+.code { color: black; }
+
+blockquote {
+    margin: 18px 21px 16px 0px;
+    padding: 0px 0px 0px 15px;
+    counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    font-size: 15px;
+    overflow-wrap: break-word;
+    border-left: 3px solid rgb(0, 0, 0);
+    white-space: pre-wrap;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 a {

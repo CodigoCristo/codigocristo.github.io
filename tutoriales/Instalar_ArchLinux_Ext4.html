@@ -144,10 +144,16 @@
                             <div class="news-body">
 <!-- Inicio de noticia -->             
 
-<h4>Instalar Archlinux - BIOS o UEFI en EXT4</span></h4>
+<h4>Instalar Archlinux - EXT4</h4>
 
 
-<p>En esta guía estaremos describiendo de manera detallada, el proceso de instalación de la distribución GNU/Linux de liberación continua, Archlinux.<br/><br/>
+<p>Una distribución de Linux® liviana y flexible que intenta mantenerlo simple. Actualmente tenemos paquetes oficiales optimizados para la arquitectura
+x86-64 - 64bits<br><br>
+Contamos con Paquetes Oficiales con un gestor de paquetes <b>Pacman</b> es una
+de las principales características distintivas de Arch Linux y un repositorio de
+paquetes no-oficiales <b>(AUR) - Arch User Repository</b> operado por la comunidad
+que crece en tamaño y calidad todos los días.<br><br>
+En esta guía estaremos conociendo de manera muy detallada, el proceso de instalación de la distribución GNU/Linux de liberación continua, Archlinux.<br/><br/>
 Iniciamos el liveCD en modo ROOT (Admintrador) para empezar a descargar los programas necesarios que vamos a usar y realizar configuraciones básicas</p>
 
 <br>
@@ -159,65 +165,29 @@ Iniciamos el liveCD en modo ROOT (Admintrador) para empezar a descargar los prog
 
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Configuración de teclado</span></h3>
+<h3>Configuración de teclado</h3>
+<h2>Establecer distribución del teclado temporal para que reconozca todos los caracteres</h2>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Establecer distribución del teclado temporal para que reconozca todos los caracteres</span></h3>
+<p>Ponemos nuestro teclado para Español</p>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para Español</p>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">loadkeys es</span></pre>
+<p>Ponemos nuestro teclado para LatinoAmerica</p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys es</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">loadkeys la-latin1</span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para LatinoAmerica</p>
+<p>Ponemos nuestro teclado para Americano</p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys la-latin1</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">loadkeys us</span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255);">Ponemos nuestro teclado para Americano</p>
+<p>Compruebe el tipo de arranque, ejecutando este comando para ver una lista con <b>ls</b></p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">loadkeys us</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">ls /sys/firmware/efi/efivars</span></pre>
 
-<br>
+<h2>1. Resultado si es UEFI : </h2>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en BIOS/Legacy </b></a></p>
+<p>Si hay archivos en <b> efivars</b> significa que tu sistema es <b>UEFI/EFI</b></p>
 
-<a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en UEFI/EFI </b></a></p></span></h3>
-
-<br>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
-Compruebe el tipo de arranque, ejecutando este comando para ver una lista con <b>ls</b></p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">ls /sys/firmware/efi/efivars</span></pre>
-
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-1. Resultado si es UEFI : </span></h3>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
-Si hay archivos en <b> efivars</b> significa que tu sistema es <b>UEFI/EFI</b></p>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(12, 60, 255); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
-<a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
+<p><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
 <b>>>> Presiona aqui para continuar con la instalación en UEFI/EFI <<< </b></a></p>
 
 
@@ -227,20 +197,10 @@ font-size: 15px; background-color: rgb(255, 255, 255);">
 <br>
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; 
-font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-2. Resultado si es BIOS/Legacy : </span></h3>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
- <b>Si NO existen archivos en efivars</b> significa que tu sistema es <b>BIOS/Legacy</b></p>
+<h2>2. Resultado si es BIOS/Legacy :</h2>
+<p><b>Si NO existen archivos en efivars</b> significa que tu sistema es <b>BIOS/Legacy</b></p>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(12, 60, 255); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
-<a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
+<p><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
 <b>>>> Presiona aqui para continuar con la instalación en BIOS/Legacy <<< </b></a></p>
 
 <a href="InstalarArchLinux/resultadobios.png" title="Img" target="_blank">
@@ -251,27 +211,13 @@ font-size: 15px; background-color: rgb(255, 255, 255);">
 
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-UEFI o BIOS mediante etiqueta del disco duro
-</span></h3>
+<h3>UEFI o BIOS mediante etiqueta del disco duro</h3>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; 
-background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; 
-color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span 
-style="color: rgb(0, 0, 0);">fdisk -l</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">fdisk -l</span></pre>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">El tipo de etiqueta del disco es <b>GPT si es UEFI</b></p>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(12, 60, 255); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
-<a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
+<p>El tipo de etiqueta del disco es <b>GPT si es UEFI</b></p>
+<p><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
 <b>>>> Presiona aqui para continuar con la instalación en UEFI/EFI <<< </b></a></p>
 
 <a href="InstalarArchLinux/gpt.png" title="CodigoCristo" target="_blank">
@@ -279,13 +225,8 @@ font-size: 15px; background-color: rgb(255, 255, 255);">
 <br>
 <br>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">El tipo de etiqueta del disco es <b>DOS si es BIOS/LEGACY</b></p>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; 
-overflow-wrap: break-word; color: rgb(12, 60, 255); font-family: &quot;Open Sans&quot;, sans-serif; 
-font-size: 15px; background-color: rgb(255, 255, 255);">
-<a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
+<p>El tipo de etiqueta del disco es <b>DOS si es BIOS/LEGACY</b></p>
+<p><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
 <b>>>> Presiona aqui para continuar con la instalación en BIOS/Legacy <<< </b></a></p>
 
 <a href="InstalarArchLinux/dos.png" title="CodigoCristo" target="_blank">
@@ -293,21 +234,16 @@ font-size: 15px; background-color: rgb(255, 255, 255);">
 <br>
 <br>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Ventajas y desventajas de UEFI o BIOS/LEGACY
-</span></h3>
+<h3>Ventajas y desventajas de UEFI o BIOS/LEGACY</h3>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>PARA SISTEMAS UEFI CON DISCOS EN GPT<br></b>
 ● Tiene disponible 128 particiones primarias<br>
 ● Es necesario tener su propia particion EFI para arrancar el sistema<br>
 ● Su particion de arranque debe ser formateada en FAT32 para arrancar el sistema<br>
 ● Su ruta será <b>/boot/efi</b></p>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>PARA SISTEMAS BIOS/LEGACY CON DISCOS EN MBR<br></b>
 ● Tiene disponible 4 particiones primarias y el resto son extendidas<br>
 ● No es necesario tener una partición para su arranque<br>
@@ -317,37 +253,21 @@ Ventajas y desventajas de UEFI o BIOS/LEGACY
 
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; 
-color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; 
-background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 Si usted ve la necesidad de cambiar de una tabla de partición a otra, use una de las siguientes opciones.
 Tenga en cuenta que <b>este procedimiento eliminará la información del dispositivo de almacenamiento escogido.</b><br><br>
 Para convertir su disco a GPT :</p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; 
-padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; 
-overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted /dev/vda mklabel gpt</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">parted /dev/vda mklabel gpt</span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Para convertir su disco a MBR.</p>
+<p>Para convertir su disco a MBR.</p>
 
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; 
-padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; 
-overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted /dev/vda mklabel msdos</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">parted /dev/vda mklabel msdos</span></pre>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Podemos confirmar los cambios con el siguiente comando :</p>
+<p>Podemos confirmar los cambios con el siguiente comando :</p>
 
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; 
-padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; 
-font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; 
-overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
-<span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">parted -l | egrep "/dev/|msdos|gpt"</span></pre>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">parted -l | egrep "/dev/|msdos|gpt"</span></pre>
 
 <br>
 <a href="InstalarArchLinux/convertgpt.png" title="CodigoCristo" target="_blank">
@@ -356,60 +276,62 @@ overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);">
 <br>
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Disco Duro</span></h3>
+<h2>DISCO DURO</h2>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-    Primero debemos identificar como es la ruta de nuestros discos luego saber cuales son particiones.</p>
+<p>Primero debemos identificar como es la ruta de nuestros discos luego saber cuales son particiones.</p>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Ruta de disco pueden ser:</p>
+<p>Ruta de disco pueden ser:</p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda (sdd o hdd)<br>/dev/sdb (sdd o hdd)<br>/dev/sdc (Así cambia de letra...)<br>/dev/nvme0n1 (veMMC o SD Card)<br>/dev/mmcblk0 (veMMC o SD Card)</blockquote>
+<code>/dev/sda (Discos sdd o hdd)</code><br>
+<code>/dev/sdb (Discos sdd o hdd)</code><br>
+<code>/dev/sdc (Así cambia de letra...)</code><br>
+<code>/dev/nvme0n1 (Discos nvme)</code><br>
+<code>/dev/mmcblk0 (SD Card)</code><br>
 
+<h2>PARTICIONES</h2>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; font-size: 1.5rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);"><span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">Las Particiones</span></h3>
+<p>Pueden ser:</p>
 
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Pueden ser:</p>
-
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1<br>/dev/sda2<br>/dev/sda3<br>/dev/nvme0n1p1<br>/dev/nvme0n1p2<br>/dev/nvme0n1p3<br>/dev/mmcblk0p1<br>/dev/mmcblk0p2<br>/dev/mmcblk0p3</blockquote>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-Para revisar nuestros discos y particiones con :</p>
-
-<pre spellcheck="false" style="margin-top: 15px; margin-bottom: 15px; padding: 11px 20px; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 14px; background: rgb(245, 245, 245); white-space: pre-wrap; overflow-wrap: break-word; color: rgba(100, 100, 100, 0.7);"><span style="color: rgb(255, 0, 0, 0.9);">root</span>@archiso ~ # <span style="color: rgb(0, 0, 0);">lsblk</span></pre>
-
+<code>/dev/sda1<br>
+/dev/sda2<br>
+/dev/sda3<br>
+/dev/nvme0n1p1<br>
+/dev/nvme0n1p2<br>
+/dev/nvme0n1p3<br>
+/dev/mmcblk0p1<br>
+/dev/mmcblk0p2<br>
+/dev/mmcblk0p3</code><br>
 <br>
 
+<p>Para revisar nuestros discos y particiones con :</p>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
-<b>>> Arch Linux incluye las siguientes herramientas de particionado:</b></p>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">lsblk</span></pre>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux5.png" style="max-width: 100%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
+<a href="InstalarArchLinux/discosexample.png" title="CodigoCristo" target="_blank">
+<img src="InstalarArchLinux/discosexample.png" alt="CodigoCristo " border="50" /></a>
+<br>
+<br>
+                                    
+<p>Aquí podemos revisar que tenemos 4 discos y un disco Nvme.</p>
+<br>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
-counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
-border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● <b>cfdisk</b> es para crear y modificar particiones facilmente
+<p><b>Dato: Arch Linux incluye las siguientes herramientas de particionado:</b></p>
+
+<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux5.png" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux5.png" alt="CodigoCristo "  /></a>
+
+<blockquote>● <b>cfdisk</b> es para crear y modificar particiones facilmente
 ● Fuente: <a href="https://wiki.archlinux.org/index.php/Partitioning" target="_blank">https://wiki.archlinux.org/index.php/Partitioning</a>
 </blockquote>
 <br>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
-Estructura de ficheros en Linux
-</span></h3>
+<h3>Estructura de ficheros en Linux</h3>
 
 
+<a href="https://img.webme.com/pic/c/codigocristo/photo_2020-04-03_15-35-05.jpg" title="CodigoCristo" target="_blank">
+<img src="https://img.webme.com/pic/c/codigocristo/photo_2020-04-03_15-35-05.jpg" alt="CodigoCristo "  /></a>
 
-<figure contenteditable="false" style="margin: -20px 0px 10px; padding: 0px; text-align: center; position: relative; white-space: pre-wrap; color: rgba(0, 0, 0, 0.8); font-family: CustomSerif, Georgia, Cambria, &quot;Times New Roman&quot;, serif; font-size: 18px;">
-<div class="figure_wrapper" style="position: relative;"><img src="https://img.webme.com/pic/c/codigocristo/photo_2020-04-03_15-35-05.jpg" style="max-width: 70%; vertical-align: top; opacity: 1; transition: opacity 0.15s ease 0s; max-height: 690px;" alt="" /></div></figure>
-
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 Debemos saber que de <b>root [ / ]</b> nacen las demás carpetas<br>
 La ventaja que <b>Linux permite asignarle una partición para cada carpeta</b><br>
 <br>
@@ -420,39 +342,36 @@ Todo depende si queremos tenerlo separado en otra partición <br></em><br>
 </p>
 
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+<h3>
 Ejemplos de particionados en UEFI - GPT
-</span></h3>
+</h3>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 1 de particionado en GPT</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
+<blockquote>/dev/sda1  EFI SYSTEM en FAT32
 /dev/sda2  ROOT - HOME - ETC...</blockquote>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 2 de particionado en GPT</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM en FAT32
+<blockquote>/dev/sda1  EFI SYSTEM en FAT32
 /dev/sda2  ROOT - HOME - ETC...
 /dev/sda3  [SWAP]</blockquote>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 3 de particionado en GPT</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  EFI SYSTEM
+<blockquote>/dev/sda1  EFI SYSTEM
 /dev/sda2  ROOT
 /dev/sda3  [SWAP]
 /dev/sda4  HOME
 </blockquote>
 
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> La documentación oficial nos recomienda usar en GPT la siguiente estructura</b></p>
 
 <a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" title="CodigoCristo" target="_blank">
@@ -460,38 +379,35 @@ Ejemplos de particionados en UEFI - GPT
 <br>
 
 <br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+<h3>
 Ejemplos de particionados en BIOS/LEGACY - MBR
-</span></h3>
+</h3>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 1 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT - ROOT - HOME - ETC...)</blockquote>
+<blockquote>/dev/sda1  BOOT - ROOT - HOME - ETC...)</blockquote>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 2 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+<blockquote>/dev/sda1  BOOT
 /dev/sda2  ROOT - HOME - ETC...
 /dev/sda3  [SWAP]</blockquote>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 3 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+<blockquote>/dev/sda1  BOOT
 /dev/sda2  ROOT
 /dev/sda3  [SWAP]
 /dev/sda4  HOME
 </blockquote>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Ejemplo 4 de particionado en MBR</b></p>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">/dev/sda1  BOOT
+<blockquote>/dev/sda1  BOOT
 /dev/sda2  ROOT
 /dev/sda3  [SWAP]
 /dev/sda4  HOME
@@ -500,7 +416,7 @@ Ejemplos de particionados en BIOS/LEGACY - MBR
 /dev/sda7  Extendida
 </blockquote>
 
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> La documentación oficial nos recomienda usar en MBR la siguiente estructura <<</b></p>
 
 
@@ -508,21 +424,12 @@ Ejemplos de particionados en BIOS/LEGACY - MBR
 <img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" alt="CodigoCristo " border="30" /></a>
 
 
-
-
-
 <br>
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; 
-padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); text-rendering: optimizelegibility; 
-font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;">
+<h3>
 Memoria SWAP
-</span></h3>
+</h3>
 
-<blockquote style="margin: 18px 21px 16px 0px; padding: 0px 0px 0px 15px; 
-counter-reset: list-1 0 list-2 0 list-3 0 list-4 0 list-5 0 list-6 0 list-7 0 list-8 0 list-9 0; 
-font-family: Consolas, Monaco, &quot;Courier New&quot;, monospace; font-size: 15px; overflow-wrap: break-word; 
-border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0, 0.8)">● Menos de 1GB RAM física    =  2GB de SWAP
+<blockquote>● Menos de 1GB RAM física    =  2GB de SWAP
 ● Entre 2GB a 4GB RAM física =  2GB a 4GB de SWAP
 ● 8GB de RAM física          =  4GB de SWAP
 ● Más de 8GB de RAM física   =  2GB a 4GB de SWAP
@@ -533,19 +440,19 @@ border-left: 3px solid rgb(0, 0, 0); white-space: pre-wrap; color: rgba(0, 0, 0,
 
 <br>
 <br>
-<p style="box-sizing: border-box; margin: 0px 0px 16px; padding: 0px; outline: 0px; overflow-wrap: break-word; color: rgb(50, 50, 50); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; background-color: rgb(255, 255, 255); text-align: left; ">
+<p>
 <b>>> Pero si necesitan hibernación 8Gb serán suficientes <<</b></p>
 
-<br>
 <hr><br>
 
-<h3 style="box-sizing: border-box; margin: 1.5rem 0px 16px; padding: 0px; outline: 0px; font-family: Muli, sans-serif; color: rgb(60, 66, 79); 
-text-rendering: optimizelegibility; font-size: 2rem; line-height: 2.25rem; overflow-wrap: break-word; background-color: rgb(255, 255, 255);">
-<span style="box-sizing: border-box; margin: 0px; padding: 0px; outline: 0px;"><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
+
+<h3><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
 <b>● Instalación de Arch en BIOS/Legacy </b></a></p>
 
 <a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
 <b>● Instalación de Arch en UEFI/EFI </b></a></p></span></h3>
+
+
 
 
                                     
