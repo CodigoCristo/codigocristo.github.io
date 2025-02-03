@@ -5,11 +5,11 @@
 
 @font-face {
   font-family: "Flaticon";
-  src: url("https://dl.dropboxusercontent.com/s/2cb98dlhpo4iv2c/Flaticon.eot");
-  src: url("https://dl.dropboxusercontent.com/s/2cb98dlhpo4iv2c/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("https://dl.dropboxusercontent.com/s/0v5p0uzzrps2mn7/Flaticon.woff") format("woff"),
-       url("https://dl.dropboxusercontent.com/s/dmdslywmlwlozz8/Flaticon.ttf") format("truetype"),
-       url("https://dl.dropboxusercontent.com/s/qlpr8toc0fip2cz/Flaticon.svg#Flaticon") format("svg");
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/Flaticon.woff") format("woff"),
+       url("../fonts/Flaticon.ttf") format("truetype"),
+       url("../fonts/Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "Flaticon";
-    src: url("https://dl.dropboxusercontent.com/s/qlpr8toc0fip2cz/Flaticon.svg#Flaticon") format("svg");
+    src: url("../Flaticon.svg#Flaticon") format("svg");
   }
 }
 

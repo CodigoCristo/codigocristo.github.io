@@ -12,7 +12,7 @@ preview-1
 ---------------------------------------- */
 .preview-1 .nivoSlider {
 	position:relative;
-	background: url(https://dl.dropboxusercontent.com/s/jlnxmy1u67uo8t0/loading.gif) no-repeat 50% 50%;
+	background: url(../img/loading.gif) no-repeat 50% 50%;
 }
 .preview-1 .nivoSlider img {
 	position:absolute;
@@ -33,7 +33,7 @@ preview-1
 	display:inline-block;
 	width:22px;
 	height:22px;
-	background:url(https://dl.dropboxusercontent.com/s/758p952pm19b3kr/bullets.png) no-repeat;
+	background:url(../img/bullets.png) no-repeat;
 	text-indent:-9999px;
 	border:0;
 	margin: 0 2px;
@@ -46,7 +46,7 @@ preview-1
 	display:block;
 	width:30px;
 	height:30px;
-	background:url(https://dl.dropboxusercontent.com/s/hdms0klihiyej1t/arrows.png) no-repeat;
+	background:url(../img/arrows.png) no-repeat;
 	text-indent:-9999px;
 	border:0;
 	-webkit-transition: all 200ms ease-in-out;
