@@ -246,6 +246,25 @@ blockquote {
     color: rgba(0, 0, 0, 0.8);
 }
 
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+
+
+
 a {
     transition: all 0.5s ease 0s;
     text-decoration: none;

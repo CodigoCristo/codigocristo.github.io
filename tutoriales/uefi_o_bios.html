@@ -144,256 +144,171 @@
                             <div class="news-body">
 <!-- Inicio de noticia -->             
 
-<h4>Instalar Archlinux - EXT4</h4>
+<h4>UEFI y BIOS Legacy </h4>
 
 
-<p>Una distribución de Linux® liviana y flexible que intenta mantenerlo simple. Actualmente tenemos paquetes oficiales optimizados para la arquitectura
-x86-64 - 64bits<br><br>
-Contamos con Paquetes Oficiales con un gestor de paquetes <b>Pacman</b> es una
-de las principales características distintivas de Arch Linux y un repositorio de
-paquetes no-oficiales <b>(AUR) - Arch User Repository</b> operado por la comunidad
-que crece en tamaño y calidad todos los días.<br><br></p>
 
-<h3><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Descarga y Crear USB Booteable</b></a></h3></h3>
+<p><strong>UEFI</strong> y <strong>BIOS Legacy</strong> son dos tipos de firmware que se utilizan para iniciar y configurar el hardware de una computadora antes de que el sistema operativo se cargue. Ambos tienen funciones similares, pero difieren en su arquitectura y capacidades.</p>
+<hr>
+    <h2>BIOS Legacy</h2>
+<a href="InstalarArchLinux/modobios.png" title="Img" target="_blank">
+    <img src="InstalarArchLinux/modobios.png" alt="CodigoCristo" width="50%" border="30" />
+</a>   
+<br><br>                                     
+    <p><strong>¿Qué es?</strong></p>
+    <p>BIOS (Basic Input/Output System) es un firmware más antiguo que ha estado en uso desde los años 80.
+    Se encarga de realizar la autoprueba de encendido (POST, Power-On Self-Test) para verificar que el hardware esté funcionando correctamente.
+   Inicia el sistema operativo desde el <strong>MBR (Master Boot Record)</strong>, que es un esquema de partición más limitado.</p>
 
-<p>
-En esta guía estaremos conociendo de manera muy detallada, el proceso de instalación de la distribución GNU/Linux de liberación continua, Archlinux.<br>
-Iniciamos el liveCD en modo ROOT (Admintrador) para empezar a descargar los programas necesarios que vamos a usar y realizar configuraciones básicas</p>
+    <p><strong>Características principales:</strong></p>
+    <p>- Interfaz basada en texto (generalmente en azul o gris).<br>
+    - Soporta discos duros de hasta <strong>2 TB</strong> debido a las limitaciones del MBR.<br>
+    - Tiempo de arranque más lento.<br>
+    - No tiene soporte nativo para interfaces gráficas o ratón.<br>
+    - Menos seguro, ya que no incluye características avanzadas de seguridad.</p>
 
+    <p><strong>Limitaciones:</strong></p>
+    <p>- Solo puede arrancar desde discos con particiones MBR.<br>
+    - No es compatible con tecnologías modernas como arranque seguro (Secure Boot) o manejo de discos grandes.</p>
+<hr>
+    <h2>UEFI</h2>
+<a href="InstalarArchLinux/MODOUEFI.jpg" title="Img" target="_blank">
+    <img src="InstalarArchLinux/MODOUEFI.jpg" alt="CodigoCristo" width="50%" border="30" />
+</a>   
+<br><br>                                    
+    <p><strong>¿Qué es?</strong></p>
+    <p>UEFI (Unified Extensible Firmware Interface) es el sucesor moderno del BIOS.
+    Es más avanzado y flexible, diseñado para superar las limitaciones del BIOS Legacy.
+    Utiliza el esquema de partición <strong>GPT (GUID Partition Table)</strong>, que permite discos más grandes y más particiones.</p>
+
+    <p><strong>Características principales:</strong></p>
+    <p>- Interfaz gráfica moderna (puede incluir soporte para ratón).<br>
+    - Soporta discos duros de más de <strong>2 TB</strong>.<br>
+    - Tiempo de arranque más rápido.<br>
+    - Incluye características de seguridad como <strong>Secure Boot</strong>, que evita la ejecución de software no autorizado durante el arranque.</p>
+
+    <p><strong>Ventajas:</strong></p>
+    <p>- Mayor flexibilidad y soporte para hardware moderno.<br>
+    - Permite arrancar desde discos GPT, lo que es esencial para sistemas con discos grandes.<br>
+    - Mejor gestión de controladores y hardware.</p>
 <br>
+<h2>Hay algunas computadoras que si traen ambos firmware y puedes elegir con cual trabajar</h2>   
 
-<a href="InstalarArchLinux/inicio.png" title="Img" target="_blank">
-<img src="InstalarArchLinux/inicio.png" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
+<a href="InstalarArchLinux/uefi-vs-bios-13.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/uefi-vs-bios-13.png" alt="CodigoCristo " border="30" /></a>
+<br><br>                                    
+    <h2>Diferencias clave entre UEFI y BIOS Legacy</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Característica</th>
+                <th>BIOS Legacy</th>
+                <th>UEFI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Interfaz</strong></td>
+                <td>Texto (básica)</td>
+                <td>Gráfica (moderna)</td>
+            </tr>
+            <tr>
+                <td><strong>Límite de disco</strong></td>
+                <td>Hasta 2 TB (MBR)</td>
+                <td>Más de 2 TB (GPT)</td>
+            </tr>
+            <tr>
+                <td><strong>Tiempo de arranque</strong></td>
+                <td>Más lento</td>
+                <td>Más rápido</td>
+            </tr>
+            <tr>
+                <td><strong>Seguridad</strong></td>
+                <td>Sin Secure Boot</td>
+                <td>Con Secure Boot</td>
+            </tr>
+            <tr>
+                <td><strong>Compatibilidad</strong></td>
+                <td>Sistemas antiguos</td>
+                <td>Sistemas modernos</td>
+            </tr>
+        </tbody>
+    </table>
 
-
-
-<h3>Configuración de teclado</h3>
-<h2>Establecer distribución del teclado temporal para que reconozca todos los caracteres</h2>
-
-<p>Ponemos nuestro teclado para Español</p>
-
-<pre><span class="root">root</span>@archiso ~ # <span class="code">loadkeys es</span></pre>
-<p>Ponemos nuestro teclado para LatinoAmerica</p>
-
-<pre><span class="root">root</span>@archiso ~ # <span class="code">loadkeys la-latin1</span></pre>
-
-<p>Ponemos nuestro teclado para Americano</p>
-
-<pre><span class="root">root</span>@archiso ~ # <span class="code">loadkeys us</span></pre>
-<br>
-<h2>1. Comprueba si tu PC inicia con UEFI o BIOS Legacy: </h2>
-
-<p>UEFI y BIOS Legacy son dos tipos de firmware que se utilizan para iniciar y configurar el hardware de una computadora antes de que el sistema operativo se cargue. </p>                                    
-
-<p>Compruebe el tipo de arranque, ejecutando este comando para ver una lista con <b>ls</b></p>
-
-<pre><span class="root">root</span>@archiso ~ # <span class="code">ls /sys/firmware/efi/efivars</span></pre>
-
-<p>Si hay archivos en <b> efivars</b> significa que tu sistema es <b>UEFI/EFI</b></p>
-
-<h2><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en UEFI/EFI </b></a></h2>
-
-
-<a href="InstalarArchLinux/resultadouefi.png" title="Img" target="_blank">
-<img src="InstalarArchLinux/resultadouefi.png" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-
-<h2>2. Resultado si es BIOS/Legacy :</h2>
-<p><b>Si NO existen archivos en efivars</b> significa que tu sistema es <b>BIOS/Legacy</b></p>
-
-<h2><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en BIOS/Legacy </b></a></h2>
-
-<a href="InstalarArchLinux/resultadobios.png" title="Img" target="_blank">
-<img src="InstalarArchLinux/resultadobios.png" alt="CodigoCristo " border="30" /></a>
-<br>
-<br>
-
-<h2><a href="uefi_o_bios.html" title="ArchUEFI" target="_blank">
-<b>● Más Información de UEFI o BIOS/Legacy </b></a></h2>
+    <h2>¿Cuál es mejor?</h2>
+    <p><strong>UEFI</strong> es la opción recomendada para sistemas modernos, ya que ofrece mayor seguridad, compatibilidad y rendimiento. <strong>BIOS Legacy</strong> solo se usa en hardware antiguo o en casos específicos donde se requiere compatibilidad con sistemas operativos o hardware más antiguos.</p>
 
 
-<h2>DISCO DURO</h2>
-
-<p>Hay que aprender a identificar como es la ruta de nuestros discos luego saber cuales son particiones.</p>
-
-<p>Ruta de disco pueden ser:</p>
-
-<code>/dev/sda (Discos sdd o hdd)</code><br>
-<code>/dev/sdb (Discos sdd o hdd)</code><br>
-<code>/dev/sdc (Así cambia de letra...)</code><br>
-<code>/dev/nvme0n1 (Discos nvme)</code><br>
-<code>/dev/mmcblk0 (SD Card)</code><br>
-
-<h2>PARTICIONES</h2>
-
-<p>Pueden ser:</p>
-
-<code>/dev/sda1<br>
-/dev/sda2<br>
-/dev/sda3<br>
-/dev/nvme0n1p1<br>
-/dev/nvme0n1p2<br>
-/dev/nvme0n1p3<br>
-/dev/mmcblk0p1<br>
-/dev/mmcblk0p2<br>
-/dev/mmcblk0p3</code><br>
-<br>
-
-<p>Para revisar nuestros discos y particiones con :</p>
-
-<pre><span class="root">root</span>@archiso ~ # <span class="code">lsblk</span></pre>
-
-<a href="InstalarArchLinux/discosexample.png" title="CodigoCristo" target="_blank">
-<img src="InstalarArchLinux/discosexample.png" alt="CodigoCristo " border="50" /></a>
-<br>
-<br>
+<br><br>
                                     
-<p>Aquí podemos revisar que tenemos 4 discos y un disco Nvme.</p>
-<br>
-
-<p><b>Dato: Arch Linux incluye las siguientes herramientas de particionado:</b></p>
-
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux5.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux5.png" alt="CodigoCristo "  /></a>
-
-<blockquote>● <b>cfdisk</b> es para crear y modificar particiones facilmente
-● Fuente: <a href="https://wiki.archlinux.org/index.php/Partitioning" target="_blank">https://wiki.archlinux.org/index.php/Partitioning</a>
-</blockquote>
-<br>
-
-<h3>Estructura de ficheros en Linux</h3>
 
 
-<a href="https://img.webme.com/pic/c/codigocristo/photo_2020-04-03_15-35-05.jpg" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/photo_2020-04-03_15-35-05.jpg" alt="CodigoCristo "  /></a>
+<h3>Verifica si es UEFI o BIOS mediante etiqueta del disco duro</h3>
 
-<p>
-Debemos saber que de <b>root [ / ]</b> nacen las demás carpetas<br>
-La ventaja que <b>Linux permite asignarle una partición para cada carpeta</b><br>
-<br>
-Podemos tener <b>/boot/</b> en una partición<br>
-Podemos tener <b>/home/</b> en otra partición<br><br>
-<em><b>/home/</b> la carpeta HOME guarda los archivos de todos los usuarios algo parecido a un DISCO D: de windows<br>
-Todo depende si queremos tenerlo separado en otra partición <br></em><br>
-</p>
+<pre><span class="root">root</span>@archiso ~ # <span class="code">fdisk -l</span></pre>
 
+<hr>
+<p>El tipo de etiqueta del disco es <b>GPT si es UEFI</b></p>
+<p><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
+<b>>>> Presiona aqui para continuar con la instalación en UEFI/EFI <<< </b></a></p>
 
-<h3>
-Ejemplos de particionados en UEFI - GPT
-</h3>
+<a href="InstalarArchLinux/gpt.png" title="CodigoCristo" target="_blank">
+<img src="InstalarArchLinux/gpt.png" alt="CodigoCristo " border="30" /></a>
 
-<p>
-<b>>> Ejemplo 1 de particionado en GPT</b></p>
+<hr><br>
+<p>El tipo de etiqueta del disco es <b>DOS si es BIOS/LEGACY</b></p>
+<p><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
+<b>>>> Presiona aqui para continuar con la instalación en BIOS/Legacy <<< </b></a></p>
 
-<blockquote>/dev/sda1  EFI SYSTEM en FAT32
-/dev/sda2  ROOT - HOME - ETC...</blockquote>
-
-
-<p>
-<b>>> Ejemplo 2 de particionado en GPT</b></p>
-
-<blockquote>/dev/sda1  EFI SYSTEM en FAT32
-/dev/sda2  ROOT - HOME - ETC...
-/dev/sda3  [SWAP]</blockquote>
-
-
-<p>
-<b>>> Ejemplo 3 de particionado en GPT</b></p>
-
-<blockquote>/dev/sda1  EFI SYSTEM
-/dev/sda2  ROOT
-/dev/sda3  [SWAP]
-/dev/sda4  HOME
-</blockquote>
-
-
-<p>
-<b>>> La documentación oficial nos recomienda usar en GPT la siguiente estructura</b></p>
-
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux6.png" alt="CodigoCristo " border="30" /></a>
-<br>
-
-<br>
-<h3>
-Ejemplos de particionados en BIOS/LEGACY - MBR
-</h3>
-
-<p>
-<b>>> Ejemplo 1 de particionado en MBR</b></p>
-
-<blockquote>/dev/sda1  BOOT - ROOT - HOME - ETC...)</blockquote>
-
-<p>
-<b>>> Ejemplo 2 de particionado en MBR</b></p>
-
-<blockquote>/dev/sda1  BOOT
-/dev/sda2  ROOT - HOME - ETC...
-/dev/sda3  [SWAP]</blockquote>
-
-<p>
-<b>>> Ejemplo 3 de particionado en MBR</b></p>
-
-<blockquote>/dev/sda1  BOOT
-/dev/sda2  ROOT
-/dev/sda3  [SWAP]
-/dev/sda4  HOME
-</blockquote>
-
-<p>
-<b>>> Ejemplo 4 de particionado en MBR</b></p>
-
-<blockquote>/dev/sda1  BOOT
-/dev/sda2  ROOT
-/dev/sda3  [SWAP]
-/dev/sda4  HOME
-/dev/sda5  Extendida (esta no se monta solo es la conexión)
-/dev/sda6  Extendida
-/dev/sda7  Extendida
-</blockquote>
-
-<p>
-<b>>> La documentación oficial nos recomienda usar en MBR la siguiente estructura <<</b></p>
-
-
-<a href="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" title="CodigoCristo" target="_blank">
-<img src="https://img.webme.com/pic/c/codigocristo/bios-archlinux7.png" alt="CodigoCristo " border="30" /></a>
-
-
-<br>
-<h3>
-Memoria SWAP
-</h3>
-
-<blockquote>● Menos de 1GB RAM física    =  2GB de SWAP
-● Entre 2GB a 4GB RAM física =  2GB a 4GB de SWAP
-● 8GB de RAM física          =  4GB de SWAP
-● Más de 8GB de RAM física   =  2GB a 4GB de SWAP
-</blockquote>
-
-<a href="https://telegra.ph/file/7da5fe855b837773bc3e6.png" title="CodigoCristo" target="_blank">
-<img src="https://telegra.ph/file/7da5fe855b837773bc3e6.png" alt="CodigoCristo " border="30" /></a>
-
+<a href="InstalarArchLinux/dos.png" title="CodigoCristo" target="_blank">
+<img src="InstalarArchLinux/dos.png" alt="CodigoCristo " border="30" /></a>
 <br>
 <br>
+<hr>
+<h3>Ventajas y desventajas de UEFI o BIOS/LEGACY</h3>
+
 <p>
-<b>>> Pero si necesitan hibernación 8Gb serán suficientes <<</b></p>
+<b>PARA SISTEMAS UEFI CON DISCOS EN GPT<br></b>
+● Tiene disponible 128 particiones primarias<br>
+● Es necesario tener su propia particion EFI para arrancar el sistema<br>
+● Su particion de arranque debe ser formateada en FAT32 para arrancar el sistema<br>
+● Su ruta será <b>/boot/efi</b></p>
+
+<p>
+<b>PARA SISTEMAS BIOS/LEGACY CON DISCOS EN MBR<br></b>
+● Tiene disponible 4 particiones primarias y el resto son extendidas<br>
+● No es necesario tener una partición para su arranque<br>
+● En caso quieran tener su propia partición debe ser formateada en EXT4 <br>
+● Su ruta será <b> /boot/ </b></p>
+
+
+
+
+<p>
+Si usted ve la necesidad de cambiar de una tabla de partición a otra, use una de las siguientes opciones.
+Tenga en cuenta que <b>este procedimiento eliminará la información del dispositivo de almacenamiento escogido.</b><br><br>
+Para convertir su disco a GPT :</p>
+
+<pre><span class="root">root</span>@archiso ~ # <span class="code">parted /dev/vda mklabel gpt</span></pre>
+
+<p>Para convertir su disco a MBR.</p>
+
+
+<pre><span class="root">root</span>@archiso ~ # <span class="code">parted /dev/vda mklabel msdos</span></pre>
+
+<p>Podemos confirmar los cambios con el siguiente comando :</p>
+
+<pre><span class="root">root</span>@archiso ~ # <span class="code">parted -l | egrep "/dev/|msdos|gpt"</span></pre>
+
+<br>
+<a href="InstalarArchLinux/convertgpt.png" title="CodigoCristo" target="_blank">
+<img src="InstalarArchLinux/convertgpt.png" alt="CodigoCristo " border="30" /></a>
+<br>
+<br>
 
 <hr><br>
 
 
-<h3><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en BIOS/Legacy </b></a></h3>
-
-<h3><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en UEFI/EFI </b></a></h3>
 
 
 
