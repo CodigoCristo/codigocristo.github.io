@@ -232,6 +232,12 @@ pre {
 
 .root { color: red; }
 
+.user { font-size: 14px; 
+        background: rgb(245, 245, 245);
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+        color: rgba(100, 100, 100, 0.7);}
+
 .code { color: black; }
 
 blockquote {
