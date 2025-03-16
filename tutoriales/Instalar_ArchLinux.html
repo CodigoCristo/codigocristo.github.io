@@ -40,7 +40,7 @@
     <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body class="home-2 home-4">
+<body class="home-2 home-4 dark-mode">
     <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -152,17 +152,165 @@ x86-64 - 64bits<br><br>
 Contamos con Paquetes Oficiales con un gestor de paquetes <b>Pacman</b> es una
 de las principales características distintivas de Arch Linux y un repositorio de
 paquetes no-oficiales <b>(AUR) - Arch User Repository</b> operado por la comunidad
-que crece en tamaño y calidad todos los días.<br><br></p>
+que crece en tamaño y calidad todos los días.<br></p>
 
-<h3><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Descarga y Crear USB Booteable</b></a></h3></h3>
 
 <p>
 En esta guía estaremos conociendo de manera muy detallada, el proceso de instalación de la distribución GNU/Linux de liberación continua, Archlinux.<br>
 Iniciamos el liveCD en modo ROOT (Admintrador) para empezar a descargar los programas necesarios que vamos a usar y realizar configuraciones básicas</p>
 
+<hr>
+<br>
+<h3>Descarga ISO de ArchLinux</h3>
+<p>
+Desde la página oficial pueden descargar la ISO:</p>
+<p>Fuente: <b><a href="https://archlinux.org/download/
+" title="Fuente" target="_blank">https://archlinux.org/download/</a></p></b>
+
+<p>
+De preferencia descarguen la ISO mediante BitTorrent:</p>
+<a href="InstalarArchLinux/descarga1.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/descarga1.png" alt="CodigoCristo" width="80%" border="30" /></a>
+
+<br><br>
+<p>
+También se pueden descargar imágenes de instalación vía HTTP desde los MirrorList más cercanos a su pais o dentro de su pais para mayor velocidad de descarga:</p>
+
+
+<a href="InstalarArchLinux/mirrorlisttt.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/mirrorlisttt.png" alt="CodigoCristo" width="50%" border="30" /></a>
+
+<br>
+<a href="InstalarArchLinux/mirrormx.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/mirrormx.png" alt="CodigoCristo" width="50%" border="30" /></a>
+<br><br>
+<p>
+La descarga mediante HTTP asegúrese de que la imagen de descarga coincida con la suma de comprobación del archivo sha256sums.txt o b2sums.txt o PGP signature.<br>Para confirmar que se descargo completamente sin fallos de una mala conexión.</p>
+
+<p>
+Es por esos motivos que yo prefiero descargar mediante BitTorrent:</p>
+
+<br>
+<a href="InstalarArchLinux/bitorrent.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/bitorrent.png" alt="CodigoCristo" width="50%" /></a>
+
+<hr>
+<br>
+<h3>Crear la USB con ArchLinux</h3>
+<p>
+En este caso existen muchas alternativas, pero la wiki oficial nos dice que podemos usar USBImager:</p>
+
+<p>Fuente: <b><a href="https://wiki.archlinux.org/title/USB_flash_installation_medium
+" title="Fuente" target="_blank">https://wiki.archlinux.org/title/USB_flash_installation_medium</a></p></b>
+
+                                    
+
+<a href="InstalarArchLinux/grabariso.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/grabariso.png" alt="CodigoCristo" width="80%" /></a>
+
+<p>
+Esta aplicación es multiplataforma, funciona en <b>windows, mac y Linux.</b><br>Solo presionamos en seleccionar nuestra ISO, luego ruta de la USB y presionamos en <b>Escribir</b>:</p>
+
+
+<a href="InstalarArchLinux/usbimager.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/usbimager.png" alt="CodigoCristo" width="50%" /></a>
+
+
+
+
+<p>
+ Si están en windows pueden usar <b>isoimagewriter, USBwriter, USBImager o Rufus.</b><br>Incluso puede que sea más facil usar <b>BalenaEtcher</b></p>
+
+<hr>
+<br>
+<h3>Iniciar la USB Booteable en el BootMenu</h3>
+<p>
+Acceder a la <b>bios</b> o al <b>BootMenu</b> depende de que marca tienes de placa madre.<br>Aqui te dejo algunas marcas conocidas con su tecla para acceder a la <b>bios</b> o al <b>BootMenu</b>:</p>
+
+<a href="uefiobios/bootmenu.png" title="Img" target="_blank">
+<img src="uefiobios/bootmenu.png" alt="CodigoCristo" width="20%" border="30" />
+</a>   
+<br><br>
+<p>
+En algunos caso hay que presionar rápidamente para entrar al bootMenu o podemos desactivar el <b>arranque rápido</b> desde la bios, pero algunos caso te muestra los atajos de teclado para acceder al bios de la placa madre:</p>
+
+<a href="InstalarArchLinux/gigabios.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/gigabios.png" alt="CodigoCristo" width="70%" border="30" />
+</a> 
+
+<br><br>
+<p>
+Dentro del BootMenu seleccionamos nuestra USB marcada como <b>SanDisk</b>:</p>
+
+
+<a href="InstalarArchLinux/bootmenu.jpeg" title="Img" target="_blank">
+<img src="InstalarArchLinux/bootmenu.jpeg" alt="CodigoCristo" width="60%" border="30" />
+</a>   
+
+
+
+<br><br>
+<p>
+<b>Hay placas que aceptan UEFI y Bios</b>, otras que solo aceptan BIOS, si estan en esa situación eligan siempre a UEFI que es el más moderno:</p>
+
+<a href="InstalarArchLinux/dualuefi.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/dualuefi.png" alt="CodigoCristo" width="50%" border="30" />
+</a>  
+
+
+<hr>
+<br>
+<h3>¿UEFI o BIOS LEGACY?</h3>
+<p>
+Ahora derrepente son palabras nuevas pero esto definirá el arranque del sistema operativo, el numero de particiones y el tipo de disco duro que debes formatear para seguir con la instalación.
+<br>Pero en pocas palabras <b>UEFI es moderno</b> y <b>BIOS LEGACY es antiguo</b></p>
+
+<h2><a href="uefi_o_bios.html" title="ArchUEFI" target="_blank">
+<b>● Más Información de UEFI o BIOS/Legacy </b></a></h2>
+
+
+<a href="InstalarArchLinux/uefiobios.png" title="Img" target="_blank">
+<img src="InstalarArchLinux/uefiobios.png" alt="CodigoCristo" width="90%" border="30" />
+</a>  
+<br><br>
+<h2>
+<b>● Depende de que presentación inicia tu sistema para que te des cuenta en que modo de arranque estás, aqui son dos rutas diferentes, porque UEFI trabaja con disco de etiqueta de GPT y BIOS trabaja con discos de etiqueta DOS/MBR, además la instalación del arranque (GRUB) es diferente. </b></h2>
+
 <br>
 
+<p>
+<b>PARA SISTEMAS UEFI CON ETIQUETA DE DISCOS SIEMPRE EN GPT<br></b>
+● Tiene disponible <b>128 particiones primarias</b><br>
+● Es necesario tener su propia particion EFI para arrancar el sistema<br>
+● Su particion de arranque debe ser <b>formateada en FAT32</b> para arrancar el sistema<br>
+● Su ruta será <b>/boot</b></p>
+
+<p>
+<b>PARA SISTEMAS BIOS/LEGACY CON ETIQUETA DE DISCOS SIEMPRE EN MBR<br></b>
+● Tiene disponible <b>4 particiones primarias</b> y el resto son extendidas<br>
+● No es necesario tener una partición para su arranque<br>
+● En caso quieran tener su propia partición como <b>/home</b> debe ser formateada en EXT4 <br>
+</p>
+
+
+
+<hr><br>
+
+<h3><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
+<b>● Instalación de Arch en EXT4 - UEFI </b></a></h3>
+
+<h3><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
+<b>● Instalación de Arch en EXT4 - BIOS/Legacy </b></a></h3>
+
+
+
+
+
+
+
+
+
+<br><br><br>
 <a href="InstalarArchLinux/inicio.png" title="Img" target="_blank">
 <img src="InstalarArchLinux/inicio.png" alt="CodigoCristo " border="30" /></a>
 <br>
@@ -215,8 +363,7 @@ Iniciamos el liveCD en modo ROOT (Admintrador) para empezar a descargar los prog
 <br>
 <br>
 
-<h2><a href="uefi_o_bios.html" title="ArchUEFI" target="_blank">
-<b>● Más Información de UEFI o BIOS/Legacy </b></a></h2>
+
 
 
 <h2>DISCO DURO</h2>
@@ -386,14 +533,7 @@ Memoria SWAP
 <p>
 <b>>> Pero si necesitan hibernación 8Gb serán suficientes <<</b></p>
 
-<hr><br>
 
-
-<h3><a href="https://codigocristo.github.io/ArchLinux_BIOS_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en BIOS/Legacy </b></a></h3>
-
-<h3><a href="https://codigocristo.github.io/ArchLinux_UEFI_ext4.html" title="ArchUEFI" target="_blank">
-<b>● Instalación de Arch en UEFI/EFI </b></a></h3>
 
 
 

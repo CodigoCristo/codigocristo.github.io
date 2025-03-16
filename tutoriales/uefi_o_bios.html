@@ -150,6 +150,8 @@
 
 <p><strong>UEFI</strong> y <strong>BIOS Legacy</strong> son dos tipos de firmware que se utilizan para iniciar y configurar el hardware de una computadora antes de que el sistema operativo se cargue. Ambos tienen funciones similares, pero difieren en su arquitectura y capacidades.</p>
 <hr>
+
+
     <h2>BIOS Legacy</h2>
 <a href="InstalarArchLinux/modobios.png" title="Img" target="_blank">
     <img src="InstalarArchLinux/modobios.png" alt="CodigoCristo" width="50%" border="30" />
@@ -192,6 +194,17 @@
     - Permite arrancar desde discos GPT, lo que es esencial para sistemas con discos grandes.<br>
     - Mejor gestión de controladores y hardware.</p>
 <br>
+
+
+<h2>Para acceder al Bios o BootMenu deben saber que marca de placamadre tienen y presionar la tecla que sale en la imagen:</h2>
+
+<a href="uefiobios/bootmenu.png" title="Img" target="_blank">
+<img src="uefiobios/bootmenu.png" alt="CodigoCristo" width="20%" border="30" />
+</a>   
+
+
+
+
 <h2>Hay algunas computadoras que si traen ambos firmware y puedes elegir con cual trabajar</h2>   
 
 <a href="InstalarArchLinux/uefi-vs-bios-13.png" title="Img" target="_blank">
@@ -272,14 +285,14 @@
 ● Tiene disponible 128 particiones primarias<br>
 ● Es necesario tener su propia particion EFI para arrancar el sistema<br>
 ● Su particion de arranque debe ser formateada en FAT32 para arrancar el sistema<br>
-● Su ruta será <b>/boot/efi</b></p>
+● Su ruta será <b>/boot</b></p>
 
 <p>
 <b>PARA SISTEMAS BIOS/LEGACY CON DISCOS EN MBR<br></b>
 ● Tiene disponible 4 particiones primarias y el resto son extendidas<br>
 ● No es necesario tener una partición para su arranque<br>
-● En caso quieran tener su propia partición debe ser formateada en EXT4 <br>
-● Su ruta será <b> /boot/ </b></p>
+● En caso quieran tener su propia partición como <b>/home</b> debe ser formateada en EXT4 <br>
+</p>
 
 
 

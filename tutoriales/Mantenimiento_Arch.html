@@ -40,7 +40,7 @@
     <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body class="home-2 home-4">
+<body class="home-2 home-4 dark-mode">
     <!--[if lt IE 8]>
           <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
@@ -170,7 +170,7 @@
 
 <p>Llevo años aplicando estos comandos y por mas que pasen los años se actualiza el sistema sin ningún tipo de problema.<br>Hay que <b>recordar que si quieren instalar un programa deben actualizar primero el sistema</b></p>
 
-
+<hr>
 <br>
 <h3>Limpieza de Cache del sistema</h3>
 <p>Empezamos Limpiando el cache de todos los programas descargados e instalados del sistema, esto no borra programas, son archivos temporales que se quedan despúes de una instalación de un programa.</p>
@@ -199,8 +199,9 @@
 <p>Fuente: <a href="https://wiki.archlinux.org/title/AUR_helpers
 " title="Fuente" target="_blank">https://wiki.archlinux.org/title/AUR_helpers</a></p>
 
-<br>
 
+<hr>
+<br>
 <h3>Limpieza de Programas No Necesarios</h3>
 <p>Elimine los paquetes no utilizados del sistema para liberar espacio en disco y simplificar el mantenimiento.<br><br>
 Empezamos a revisar la lista de programas que tenemos instalados en nuestro sistema.</p>
@@ -264,6 +265,7 @@ Empezamos a revisar la lista de programas que tenemos instalados en nuestro sist
 <img src="mantenimiento_arch/ancient-packages.png" alt="CodigoCristo " style="width: 50%; border: 30px;" /></a>
 <br>
 <br>
+<hr>
 <br>
 <h3>Enlaces simbólicos rotos</h3>
 <p>Para enumerar rápidamente todos los enlaces simbólicos rotos de archivos permanentes en su sistema, utilice:</p>
@@ -284,8 +286,9 @@ Empezamos a revisar la lista de programas que tenemos instalados en nuestro sist
 <img src="mantenimiento_arch/enlacesLimpios.png" alt="CodigoCristo" style="width: 50%; border: 30px;" />
 </a>
 
-<br>
-<br> <br>                                   
+
+<hr>
+<br>                                  
 <h3>Archivos de configuración antiguos</h3>
 <p>Los archivos de configuración antiguos pueden entrar en conflicto con versiones más recientes del software o corromperse con el tiempo. Elimine periódicamente las configuraciones innecesarias, especialmente en su directorio personal y en <b>~/.config.</b> </p>
 
@@ -299,9 +302,9 @@ Empezamos a revisar la lista de programas que tenemos instalados en nuestro sist
     Puede que haya archivos antiguos ahí también.
 </p>
 
-
-<br>
-<br>                                   
+<br> 
+<hr>
+<br>                                  
 <h3>Borrar programas manualmente</h3>
 <p>Este programa lo instale usando meson o Make, la verdad no me acuerdo pero existe en mi sistema, tanto como el binario y el archivo <b>org.cristo.arcris.desktop</b> </p>
 
@@ -390,6 +393,17 @@ echo "Proceso completado."
 <img src="mantenimiento_arch/delete.png" alt="CodigoCristo" style="width: 50%; border: 30px;" />
 </a>
 
+<br>
+<br>
+<hr>
+<br>                                  
+<h3>Servicios de systemd fallidos</h3>
+<p>Compruebe si algún servicio systemd ha fallado:</p>
+<pre><span class="user">[usuario@nombre_de_pc ~]$ </span><span class="code">systemctl --failed</span></pre>
+<br>
+<a href="mantenimiento_arch/systemd.png" title="Img" target="_blank">
+<img src="mantenimiento_arch/systemd.png" alt="CodigoCristo" style="width: 50%; border: 30px;" />
+</a>
 <br><br>
 
 <hr>
