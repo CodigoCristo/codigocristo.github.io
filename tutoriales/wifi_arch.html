@@ -144,148 +144,123 @@
 <!-- Inicio de noticia -->             
 
 
-<br>
-<hr>
-<h3>Kernels Oficialmente Soportados para Arch Linux</h3>
-
-<hr>
-<br>
-<h3>
-Lista de kernels
-</h3>
-
-
-<blockquote>● <b>linux</b>
-● <b>linux-hardened</b>
-● <b>linux-lts</b>
-● <b>linux-rt</b>
-● <b>linux-zen</b>
-</blockquote>
-
 <hr>
 <h3>
-Linux Stable (Estable)
+Conexión a Internet por Wifi
 </h3>
-
-<p>● <b>Propósito:</b> Kernel estándar de Linux con parches mínimos para garantizar estabilidad.<br>
-● <b>Características:</b> Ideal para la mayoría de los usuarios que buscan un kernel confiable y actualizado regularmente.<br>
-● <b>Uso recomendado:</b> Usuarios generales y sistemas de producción que no requieren características especializadas.
-</p>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S linux linux-headers mkinitcpio linux-firmware</span></pre>
-
-
-<hr>
-<h3>
-Linux Hardened (Fortalecido)
-</h3>
-
-<p>● <b>Propósito:</b> Enfocado en la seguridad, con parches adicionales para mitigar exploits.
-<br>
-● <b>Características:</b> Habilita funciones de fortalecimiento del kernel y protege contra vulnerabilidades en el espacio de usuario.
-<br>
-● <b>Uso recomendado:</b> Entornos donde la seguridad es crítica, como servidores o sistemas expuestos a amenazas.
-</p>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S linux-hardened linux-hardened-headers mkinitcpio linux-firmware</span></pre>
-
-
-<hr>
-<h3>
-Linux Longterm (Largo Plazo)
-</h3>
-
-<p>● <b>Propósito:</b> Versión del kernel con soporte extendido (LTS) para sistemas que requieren estabilidad a largo plazo orientadas a su uso en servidores.
-<br>
-● <b>Características:</b> Recibe actualizaciones de seguridad y correcciones de errores durante varios años.
-<br>
-● <b>Uso recomendado:</b> Servidores y sistemas embebidos que no pueden actualizarse frecuentemente.
-</p>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S linux-lts linux-lts-headers mkinitcpio linux-firmware</span></pre>
-
-
-<hr>
-<h3>
-Linux Realtime (Tiempo Real)
-</h3>
-
-<p>● <b>Propósito:</b> Diseñado para aplicaciones que requieren baja latencia y alta precisión en el tiempo de respuesta.
-<br>
-● <b>Características:</b> Permite la preemptión de casi todo el kernel, ideal para tareas críticas en tiempo real.
-<br>
-● <b>Uso recomendado:</b> Sistemas de audio/video profesional, robótica, automatización industrial y aplicaciones científicas.
-</p>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S linux-rt linux-rt-headers mkinitcpio linux-firmware</span></pre>
-
-
-
-<hr>
-<h3>
-Linux Zen Kernel
-</h3>
-
-<p>● <b>Propósito:</b> Optimizado para un rendimiento superior en sistemas de uso diario.
-<br>
-● <b>Características:</b> Combina parches de rendimiento y mejoras de escalabilidad para una experiencia más rápida y fluida.
-<br>
-● <b>Uso recomendado:</b> Usuarios de escritorio, jugadores y quienes buscan maximizar el rendimiento de su hardware.
-</p>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S linux-zen linux-zen-headers mkinitcpio linux-firmware</span></pre>
-
-<br>
-
-
-<hr>
-
-<h4>IMPORTANTE</h4>
 
 
 <p>
-Es importante saber que kernel vas a usar para instalar drivers como la grafica, impresora, tarjeta de ethernet y otro paquete que hayas instalado para que funcione tu hardware, hay que instalar el paquete correcto dependiendo que kernel estas usando.<br><br>
-Por ejemplo:<br>
-Para <b>NVIDIA</b> si usas: </p>
+Si desea conectarse por wifi, es conveniente primero verificar si se ha cargado correctamente el controlador 
+de la tarjeta wifi. Compruebe que en la salida del siguiente comando exista un fichero que inicie con la letra 
+<em><b>wl...</b></em></p>
+
+<blockquote><span class="root">wl</span>an0<br><span class="root">wl</span>p2s0<br>Otros...</blockquote>
+
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">ls /sys/class/net | grep wl</span></pre>
 
 
 
-
-<br>
-<h3>
-Kernel Linux Stable (Estable)
-</h3>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S nvidia-open</span></pre>
-
-<br>
-<h3>
-Linux Longterm (LTS)
-</h3>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S nvidia-open<span class="root">-lts</span></pre>
-
-<br>
-<h3>
-Otros Kernels Linux (Zen - RT - Hardened y otros)
-</h3>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo pacman -S nvidia-open<span class="root">-dkms</span></pre>
-
-<br><br>
-<hr>
-<br>
-<h4>CAMBIAR EL KERNEL EXISTENTE</h4>
-
-<p>
-Si ya tienes un kernel instalado solo basta en instalar el kernel que necesitas y al final de la instalación te pedira eliminar el kernel anteriormente instalado.<br>
-Pero es importante volver a generar la configuración de grub para que reconozca las nuevas <b>.img</b> del kernel recien instalado con el siguiente comando :</p>
-
-<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">sudo grub-mkconfig -o /boot/grub/grub.cfg</pre>
 
 
 <p>
-Y listo reincias el sistema teniendo cuidado que no usas drivers que dejaran de funcionar si no instalas correctamente como el ejemplo de <b>Nvidia</b></p>
+Si no existe ningún fichero que inicie con la letra <span class="root"><em><b>wl </b></em></span>,entonces no podrá realizar la instalación vía wifi.
+<br>
+Si por el contrario el fichero existe entonces será posible conectarse a Internet vía wifi.<br>
+</p>
+
+
+
+<br>
+<h3>
+Conexión de Wifi con NMCLI o IWD
+</h3>
+
+
+<h3>
+NMCLI
+</h3>
+
+<p>
+NMCLI es gracias a NetworkManager, Fuente: <b><a href="https://wiki.archlinux.org/title/NetworkManager#nmcli_examples" target="_blank">https://wiki.archlinux.org/title/NetworkManager#nmcli_examples</a></b></p>
+
+
+<p>
+Entramos como root y Activamos el servicio de NetworkManager :</p>
+
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">systemctl start --now NetworkManager</span></pre>
+
+
+
+<p>
+Ahora si podemos usar nmcli :</p>
+
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">nmcli dev wifi list</span></pre>
+
+<a href="instalaruefi/49.png" title="Img" target="_blank">
+<img src="instalaruefi/49.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
+<br>
+<br>
+
+<p>
+Si la red tiene espacios solo ponemos comilla simple o doble comillas en el bssid:</p>
+
+
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">nmcli device wifi connect 'NombreDeRed' password 'contraseña'</span></pre>
+
+
+
+
+
+<p>
+Verificamos la conexión:</p>
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">nmcli dev status</span></pre>
+
+<a href="instalaruefi/50.png" title="Img" target="_blank">
+<img src="instalaruefi/50.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
+<br>
+<br>
+
+
+
+<br>
+<h3>
+IWD
+</h3>
+
+<p>
+IWD nos brinda el programa <b>iwctl</b> Fuente: <b><a href="https://wiki.archlinux.org/title/iwd" target="_blank">https://wiki.archlinux.org/title/iwd</a></b><br>
+Para saber el nombre de <b>device</b> debemos revisar en <b>ls /sys/class/net</b><br>Asi obtenemos el nombre de nuestro dispositivo de red</b></p>
+
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">ls /sys/class/net | grep w</span></pre>
+
+
+<p>
+En mi caso fue <b>wlo1</b></p>
+<a href="instalaruefi/51.png" title="Img" target="_blank">
+<img src="instalaruefi/51.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
+<br>
+<br>
+
+<p>
+Activamos el servicio de IWD para poder usuarlo :</p>
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">systemctl start --now iwd</span></pre>
+
+
+
+<p>
+Ahora si podemos usar IWD :</p>
+
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">iwctl --passphrase 'contraseña' station wlo1 connect 'NombreDeRed'</span></pre>
+
+
+
+
+
+
+<p><br><b>Antes de hacer alguna instalación siempre actualizamos el sistema con:</b><br></p>
+<pre><span class="user">[root</span>@nombredepc ~]# <span class="code">pacman -Syu</span></pre>
+
 
 
 
