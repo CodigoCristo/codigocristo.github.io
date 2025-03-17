@@ -97,6 +97,13 @@ body {
     height: 100%;
 }
 
+/* Estilo para dispositivos móviles (por ejemplo, pantallas menores a 768px) */
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 100%;
+  }
+}
+
 /* Modo oscuro */
 body.dark-mode {
     background-color: #1f1f1f !important; /* Fondo oscuro */

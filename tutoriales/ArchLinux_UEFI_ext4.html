@@ -150,7 +150,7 @@
 Iniciamos entrando al BootMenu y seleccionando la USB con la ISO de Arch.<br>
 </p>
 <a href="instalaruefi/1.png" title="Img" target="_blank">
-<img src="instalaruefi/1.png" alt="CodigoCristo" width="50%" border="30" /></a>
+<img src="instalaruefi/1.png" alt="CodigoCristo" class="responsive-image" width="50%" border="30" /></a>
 
 <br><br>
 <p>
@@ -159,7 +159,7 @@ Luego en <b>Arch Linux Install medium (x86_64, UEFI)</b>, la segunda opción es 
 
 <br>
 <a href="instalaruefi/2.png" title="Img" target="_blank">
-<img src="instalaruefi/2.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/2.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br>
 <br>
 <hr>
@@ -220,7 +220,7 @@ Para conexión por cable tan solo es necesario tener conectado el cable de Ether
 
 
 <a href="instalaruefi/3.png" title="Img" target="_blank">
-<img src="instalaruefi/3.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/3.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br>
 <br>
 <p>Podemos ver que esta descargando paquetes y lo hace por 8 veces tal cual el comando ejecutado.</p>
@@ -241,7 +241,7 @@ Para conexión por cable tan solo es necesario tener conectado el cable de Ether
 <pre><span class="root">root</span>@archiso ~ # <span class="code">pacman -Sy</span></pre>
 
 <a href="instalaruefi/4.png" title="Img" target="_blank">
-<img src="instalaruefi/4.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/4.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br>
 
 <hr>
@@ -392,13 +392,13 @@ Discos Duros en UEFI tienen la etiqueta de <b>GPT</b> que permite mas de <b>128 
 
 <pre><span class="root">root</span>@archiso ~ # <span class="code">fdisk -l</span></pre>
 <a href="instalaruefi/9.png" title="Img" target="_blank">
-<img src="instalaruefi/9.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/9.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br>
 
 <pre><span class="root">root</span>@archiso ~ # <span class="code">lsblk</span></pre>
 
 <a href="instalaruefi/10.png" title="Img" target="_blank">
-<img src="instalaruefi/10.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/10.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br>
 <br>
 <p>Identificamos el disco en este caso es <b>/dev/vda</b>.<br><br>Borramos todo lo que tiene el disco para hacer una instalación limpia:</p>
@@ -407,7 +407,7 @@ Discos Duros en UEFI tienen la etiqueta de <b>GPT</b> que permite mas de <b>128 
 <pre><span class="root">root</span>@archiso ~ # <span class="code">sgdisk --zap-all /dev/vda</span></pre>
 
 <a href="instalaruefi/11.png" title="Img" target="_blank">
-<img src="instalaruefi/11.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/11.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br>
 <h2><b>Ahora abrimos un particionador semi gráfico en este caso usaremos cfdisk:</b></h2>
 
@@ -420,11 +420,11 @@ Discos Duros en UEFI tienen la etiqueta de <b>GPT</b> que permite mas de <b>128 
 <h2><b>Nuevamente aclaro que para sistemas UEFI se trabaja con GPT, seleccionamos la etiqueta GPT!</b></h2>
 
 <a href="instalaruefi/12.png" title="Img" target="_blank">
-<img src="instalaruefi/12.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/12.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> <br>
 
 <a href="instalaruefi/13.png" title="Img" target="_blank">
-<img src="instalaruefi/13.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/13.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br> <br>
 
 
@@ -436,7 +436,7 @@ Discos Duros en UEFI tienen la etiqueta de <b>GPT</b> que permite mas de <b>128 
 </blockquote>
 
 <a href="instalaruefi/14.png" title="Img" target="_blank">
-<img src="instalaruefi/14.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/14.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br> <br>
 
 
@@ -448,11 +448,11 @@ Discos Duros en UEFI tienen la etiqueta de <b>GPT</b> que permite mas de <b>128 
 <p>Ahora toca cambiar el tipo de partición estando ubicados en la partición que queremos cambiar el tipo se mueven a la izquierda en <b>[ Tipo ]</b> </p>
 
 <a href="instalaruefi/16.png" title="Img" target="_blank">
-<img src="instalaruefi/16.png" alt="CodigoCristo" width="30%" /></a>
+<img src="instalaruefi/16.png" alt="CodigoCristo" class="responsive-image" width="30%" /></a>
 <br> <br>
 
 <a href="instalaruefi/15.png" title="Img" target="_blank">
-<img src="instalaruefi/15.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/15.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> <br>
 
 <blockquote>● Para la particion EFI  <b>/dev/vda1</b> debe ser tipo <b>EFI System</b>
@@ -467,7 +467,7 @@ Discos Duros en UEFI tienen la etiqueta de <b>GPT</b> que permite mas de <b>128 
 <p>Podemos revisarlo con <b>fdisk -l</b></p>
 
 <a href="instalaruefi/17.png" title="Img" target="_blank">
-<img src="instalaruefi/17.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/17.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br>
 
 
@@ -491,7 +491,7 @@ Existen múltiples formatos de particiones disponibles para usar, sin embargo en
 <p><b>Formateo de la Partición de Root :</b></p>
 <pre><span class="root">root</span>@archiso ~ # <span class="code">mkfs.ext4 -L "ROOT" /dev/vda3</span></pre>
 <a href="instalaruefi/18.png" title="Img" target="_blank">
-<img src="instalaruefi/18.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/18.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> 
 <hr>
 
@@ -540,7 +540,7 @@ Montando la partición de Arranque <b><em>/boot</em></b> </p>
 Luego de formatear y montar las particiones podemos revisarlo que todo este bien con <b><em>lsblk</em></b> </p>
 
 <a href="instalaruefi/19.png" title="Img" target="_blank">
-<img src="instalaruefi/19.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/19.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> 
 
 <hr>
@@ -558,7 +558,7 @@ Para tener los Mirros más rápidos para tener mejores descargas usaremos <b><em
 <pre><span class="root">root</span>@archiso ~ # <span class="code">cat /etc/pacman.d/mirrorlist</span></pre>
 
 <a href="instalaruefi/20.png" title="Img" target="_blank">
-<img src="instalaruefi/20.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/20.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br> 
 
 
@@ -570,7 +570,7 @@ Para tener los Mirros más rápidos para tener mejores descargas usaremos <b><em
 <pre><span class="root">root</span>@archiso ~ # <span class="code">pacstrap -K /mnt base base-devel nano</span></pre>
 
 <a href="instalaruefi/21.png" title="Img" target="_blank">
-<img src="instalaruefi/21.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/21.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> 
 
 
@@ -612,7 +612,7 @@ Estas definiciones se montaran de forma dinámica en el arranque:</b></p>
 
 
 <a href="instalaruefi/22.png" title="Img" target="_blank">
-<img src="instalaruefi/22.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/22.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br> 
 
 <br>
@@ -636,7 +636,7 @@ Estas definiciones se montaran de forma dinámica en el arranque:</b></p>
 <pre><span class="user">[root</span>@archiso /]# <span class="code">nano /etc/locale.gen</span></pre>
 
 <a href="instalaruefi/23.png" title="Img" target="_blank">
-<img src="instalaruefi/23.png" alt="CodigoCristo" width="20%" /></a>
+<img src="instalaruefi/23.png" alt="CodigoCristo" class="responsive-image" width="20%" /></a>
 <br> 
 
 <blockquote>● Ctrl + W para buscar palabras en nano<br>
@@ -650,7 +650,7 @@ Estas definiciones se montaran de forma dinámica en el arranque:</b></p>
 
 
 <a href="instalaruefi/24.png" title="Img" target="_blank">
-<img src="instalaruefi/24.png" alt="CodigoCristo" width="30%" /></a>
+<img src="instalaruefi/24.png" alt="CodigoCristo" class="responsive-image" width="30%" /></a>
 <br> <br> 
 <p>
 Vamos a estar usando mucho el comando <b><span style="color: rgb(255, 0, 0);">echo</span></b><br>
@@ -681,7 +681,7 @@ Ahora ya tendriamos el sistema en español, comprobamos con <b>pacman -Sy</b>:
 </p>
 
 <a href="instalaruefi/25.png" title="Img" target="_blank">
-<img src="instalaruefi/25.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/25.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> <br> 
 
 <br>
@@ -697,12 +697,12 @@ Ahora ya tendriamos el sistema en español, comprobamos con <b>pacman -Sy</b>:
 
 <pre><span class="user">[root</span>@archiso /]# <span class="code">ls /usr/share/zoneinfo/</span></pre>
 <a href="instalaruefi/26.png" title="Img" target="_blank">
-<img src="instalaruefi/26.png" alt="CodigoCristo" width="100%" /></a>
+<img src="instalaruefi/26.png" alt="CodigoCristo" class="responsive-image" width="100%" /></a>
 <br> <br> 
 <p>Para saber la zona horaria automáticamente según la ubicación con dirección IP, se puede usar una API de geolocalización para saber tu zona horaria. <br>Por ejemplo con el comando, <b>curl <a href="https://ipapi.co/timezone" target="_blank">https://ipapi.co/timezone</b></a> o revisar con el celular que cadena de texto nos da entrar a ese link de <b><a href="https://ipapi.co/timezone" target="_blank">https://ipapi.co/timezone</b></a>  </p>
 
 <a href="instalaruefi/27.png" title="Img" target="_blank">
-<img src="instalaruefi/27.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/27.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> 
 
 
@@ -728,7 +728,7 @@ Ahora ya tendriamos el sistema en español, comprobamos con <b>pacman -Sy</b>:
 
 
 <a href="instalaruefi/28.png" title="Img" target="_blank">
-<img src="instalaruefi/28.png" alt="CodigoCristo" width="100%" /></a>
+<img src="instalaruefi/28.png" alt="CodigoCristo" class="responsive-image" width="100%" /></a>
 <br> 
 
 <br>
@@ -745,7 +745,7 @@ Ahora ya tendriamos el sistema en español, comprobamos con <b>pacman -Sy</b>:
 
 <p>En <b>nombre_de_usuario</b>, le cambiamos a nuestro gusto.</p>
 <a href="instalaruefi/29.png" title="Img" target="_blank">
-<img src="instalaruefi/29.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/29.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> 
 
 <br>
@@ -762,7 +762,7 @@ Dentro de <b>nano</b> buscamos con <b>CTRL+W</b> la cadena de texto <b>root ALL=
 Para que tenga permisos y mismos privilegios al ejecutar sudo.</p>
 <blockquote>nombre_de_usuario ALL=(ALL:ALL) ALL</blockquote>
 <a href="instalaruefi/30.png" title="Img" target="_blank">
-<img src="instalaruefi/30.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/30.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> 
 
 
@@ -828,7 +828,7 @@ Demonio para manejar conexiones Wi-Fi (opcional, pero recomendado para Wi-Fi).
 </p>
 
 <a href="instalaruefi/31.png" title="Img" target="_blank">
-<img src="instalaruefi/31.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/31.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> 
 <h2><b>Habilitar y arrancar los servicios:</b></h2>
 
@@ -851,7 +851,7 @@ Demonio para manejar conexiones Wi-Fi (opcional, pero recomendado para Wi-Fi).
 <pre><span class="user">[root</span>@archiso /]# <span class="code">systemctl enable --now NetworkManager dhcpcd iwd</span></pre>
 
 <a href="instalaruefi/32.png" title="Img" target="_blank">
-<img src="instalaruefi/32.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/32.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> 
 
 <br>
@@ -899,7 +899,7 @@ Guarda la lista generada en el archivo de configuración de mirrors de Pacman.
 </p>
 
 <a href="instalaruefi/33.png" title="Img" target="_blank">
-<img src="instalaruefi/33.png" alt="CodigoCristo" width="90%" /></a>
+<img src="instalaruefi/33.png" alt="CodigoCristo" class="responsive-image" width="90%" /></a>
 <br> 
 
 
@@ -915,7 +915,7 @@ Guarda la lista generada en el archivo de configuración de mirrors de Pacman.
 <p>Generalmente no es necesario crear un nuevo <b>initramfs</b>, porque <b>mkinitcpio</b> se ejecutó durante la instalación del paquete del kernel con <b>pacstrap</b>.</p>
 
 <a href="instalaruefi/34.png" title="Img" target="_blank">
-<img src="instalaruefi/34.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/34.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> 
 
 <pre><span class="user">[root</span>@archiso /]# <span class="code">pacman -S grub efibootmgr os-prober </span></pre>
@@ -944,13 +944,13 @@ Aquí solo importa recordar cual fue la particion de EFI y cual fue la carpeta q
 En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><span style="color: rgb(255, 0, 0);"><b>/boot</b></span> Entonces instalamos grub en <b>/boot</b></p>
 <p>Lo podemos revisar con <b>lsblk</b></p>                                    
 <a href="instalaruefi/35.png" title="Img" target="_blank">
-<img src="instalaruefi/35.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/35.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> 
 <pre><span class="user">[root</span>@archiso /]# <span class="code">grub-install --target=x86_64-efi --efi-directory=<span style="color: rgb(255, 0, 0);">/boot</span> --bootloader-id=Arch --removable</span></pre>
 
 <p>Lo podemos revisar que carpetas nuevas se crearon y que se instaló correctamente con <b>du -h /boot</b></p>  
 <a href="instalaruefi/36.png" title="Img" target="_blank">
-<img src="instalaruefi/36.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/36.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br>
 
 <h2><b>● Nota adicional:
@@ -968,20 +968,20 @@ En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><spa
 <p>Podemos cambiar el tiempo de espera de Grub en <b>GRUB_TIMEOUT=5</b> y quitar el arranque silencioso borrando <b>quiet</b>.</p>
 
 <a href="instalaruefi/37.png" title="Img" target="_blank">
-<img src="instalaruefi/37.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/37.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> 
 <br>
 <p>El arranque silencio no muestra estos mensajes que inician todos los servicios del sistema operativo.</p>
 
 <a href="instalaruefi/38.png" title="Img" target="_blank">
-<img src="instalaruefi/38.png" alt="CodigoCristo" width="30%" /></a>
+<img src="instalaruefi/38.png" alt="CodigoCristo" class="responsive-image" width="30%" /></a>
 <br> 
 <br>
 
 <p>Para que funcione <b>os-prober</b> debemos quitar el comentario, eliminando <b>#</b> de <b>GRUB_DISABLE_OS_PROBER</b>.</p>
 
 <a href="instalaruefi/39.png" title="Img" target="_blank">
-<img src="instalaruefi/39.png" alt="CodigoCristo" width="50%" /></a>
+<img src="instalaruefi/39.png" alt="CodigoCristo" class="responsive-image" width="50%" /></a>
 <br> 
 <br>
 
@@ -995,7 +995,7 @@ En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><spa
 <pre><span class="user">[root</span>@archiso /]# <span class="code">grub-mkconfig -o /boot/grub/grub.cfg</span></pre>
 
 <a href="instalaruefi/40.png" title="Img" target="_blank">
-<img src="instalaruefi/40.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/40.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br> 
 
 
@@ -1008,7 +1008,7 @@ En este caso fue formateado en <b>/dev/vda1</b> y la carpeta fue <b>/mnt</b><spa
 
 <p>Bajamos hasta <b># Misc options</b></p>
 <a href="instalaruefi/41.png" title="Img" target="_blank">
-<img src="instalaruefi/41.png" alt="CodigoCristo" width="30%" /></a>
+<img src="instalaruefi/41.png" alt="CodigoCristo" class="responsive-image" width="30%" /></a>
 <br> <br> 
 <p>Aqui quitamos los comentarios marcados por # :</p>
 
@@ -1061,7 +1061,7 @@ Desactiva el entorno aislado de Pacman (reduce la seguridad).
 Esto se escribe manualmente y se debe respetar las Mayúsculas y Minúsculas.<br>Activa la animación de Pacman comiendo.
 </p> <br> 
 <a href="instalaruefi/43.png" title="Img" target="_blank">
-<img src="instalaruefi/43.png" alt="CodigoCristo" width="80%" /></a>
+<img src="instalaruefi/43.png" alt="CodigoCristo" class="responsive-image" width="80%" /></a>
 <br> <br> 
 
 
@@ -1070,7 +1070,7 @@ Esto se escribe manualmente y se debe respetar las Mayúsculas y Minúsculas.<br
 Esto nos brinda varias librerias de 32bits, en juegos o programas viejos que necesitan esas librerias</p>
 
 <a href="instalaruefi/42.png" title="Img" target="_blank">
-<img src="instalaruefi/42.png" alt="CodigoCristo" width="30%" /></a>
+<img src="instalaruefi/42.png" alt="CodigoCristo" class="responsive-image" width="30%" /></a>
 <br> <br> 
 
 
@@ -1101,7 +1101,7 @@ Videos</blockquote>
 <pre><span class="user">[root</span>@archiso /]# <span class="code">su nombre_de_usuario -c "xdg-user-dirs-update"</span></pre>
 
 <a href="instalaruefi/44.png" title="Img" target="_blank">
-<img src="instalaruefi/44.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/44.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br> 
 
 
@@ -1136,7 +1136,7 @@ Videos</blockquote>
 <pre><span class="root">root</span>@archiso ~ # <span class="code">reboot</span></pre>
 
 <a href="instalaruefi/45.png" title="Img" target="_blank">
-<img src="instalaruefi/45.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/45.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br> 
 
 <br>
@@ -1144,13 +1144,13 @@ Videos</blockquote>
 <h3>Después de reiniciar</h3>
 
 <a href="instalaruefi/46.png" title="Img" target="_blank">
-<img src="instalaruefi/46.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/46.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br> 
 
 <p>Iniciamos como <b>root</b> y en <b>tty1</b> (terminal virtual 1)</p>
 
 <a href="instalaruefi/47.png" title="Img" target="_blank">
-<img src="instalaruefi/47.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/47.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br> 
 
 
@@ -1160,7 +1160,7 @@ Videos</blockquote>
 <pre><span class="user">[root</span>@nombredepc ~]# <span class="code">ping -c 3 archlinux.org</span></pre>
 <br>
 <a href="instalaruefi/48.png" title="Img" target="_blank">
-<img src="instalaruefi/48.png" alt="CodigoCristo" width="70%" /></a>
+<img src="instalaruefi/48.png" alt="CodigoCristo" class="responsive-image" width="70%" /></a>
 <br> <br> <br>
 
 <p>Con esto finalizamos la instalación del <b>sistema base</b> falta instalar muchas mas cosas como un <b>gestor grafico, drivers de la gráfica, programas,</b> pero eso ya es personalización de cada uno, dejare unos links para mayor información.</p>
